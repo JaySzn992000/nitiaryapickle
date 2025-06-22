@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Navbar from "./headers_footer/navbar";
 import Header from "./headers_footer/header";
@@ -19,6 +20,9 @@ mobileno: "",
 id: "",
 
 });
+
+
+const location = useLocation();
 
 useEffect(() => {
 const storedUser = localStorage.getItem("loggedInUser");

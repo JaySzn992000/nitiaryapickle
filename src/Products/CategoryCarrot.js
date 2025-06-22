@@ -5,6 +5,7 @@ import Filters from "../components/Filters";
 import Navbar from "../headers_footer/navbar";
 import Filterheader from "../headers_footer/Filterheader";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 import "../components/ProductListmodule.css";
 import "./Categoriesfruits.css";
 

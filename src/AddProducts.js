@@ -64,8 +64,6 @@ setProductImageOne(null);
 setProductImageTwo(null);
 setProductImageThree(null);
 setProductSizes("");
-("");
-
 
 document.getElementById("file-upload").value = "";
 document.getElementById("file-upload-one").value = "";
