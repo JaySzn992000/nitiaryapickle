@@ -1,0 +1,451 @@
+/* Done  */
+
+/* .. Outer
+Div_Container ... */
+
+#cart_container {
+position: relative;
+width: 90%;
+width: 1127px;
+font-size: 0.9rem;
+/* Auto Should be here only 
+otherwise It will be on 
+top - 277px */
+margin: auto;
+margin-top: 9.7em;
+}
+
+
+#cart_container .cart_items_h2 {
+margin-top: -3.7em;
+margin-bottom: 1em;
+font-size: 1.3rem;
+}
+
+.flx_cart .Cart_heads {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+background-color: rgb(248, 230, 240);
+border-top: 1px solid #FF1493;
+border-bottom: 1px solid #FF1493,;
+align-items: center;
+flex-wrap: wrap;
+width: 100%;
+height: 43px;
+gap: 1em;  
+padding: 0 10px;
+}
+
+
+.cart_flex {
+display: grid;
+border-bottom: 0.5px solid rgb(237, 231, 231);
+grid-template-columns: repeat(6, 1fr);
+align-items: center;
+flex-wrap: wrap;
+width: 100%;
+margin-top: 1.3em;
+}
+
+
+.flex_about img {
+width: 113px;
+max-width: 100%;
+height: auto;
+object-fit: cover;
+margin: 0.5em 0em 0.5em 0em;
+}
+
+
+.cart-item-image {
+cursor: pointer;
+}
+
+
+.Produt_nCart {
+line-height: 2.3em;
+transition: 0.5s;
+}
+
+
+
+.cart_flex .second_contain .quantity_update {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1em;
+}
+
+
+/* .. for 
+Amount ..  */
+
+
+.flex_amount {
+width: 100%;
+right: 0;
+height: 105px;
+text-align: end;
+line-height: 3.9em;
+margin-top: 2em;
+padding: 10px;
+}
+
+
+.flex_amount section {
+right: 0;
+}
+
+.flex_amount button {
+display: flex;
+gap: 0.7em;
+position: absolute;
+align-items: center;
+right: 0;
+width: 211px;
+border-radius: 3px;
+padding: 14px;
+padding-left: 27px;
+font-size: 1rem;
+margin-top: 1.2em;
+border: none;
+background-color: #f85c74;
+color: #FFFFFF;
+cursor: pointer;
+}
+
+
+.flex_amount button h4 {
+color: #FFFFFF;
+}
+
+.flex_amount img {
+width: 31px;
+}
+
+
+.quantity_update {
+margin-top: 0.7em;
+}
+
+.quantity_update button {
+width: 35px;
+padding: 2px;
+font-size: 1.3rem;
+background-color: #FFFFFF;
+border: 1px solid #DCDCDC;
+cursor: pointer;
+}
+
+.flex_amount h1 {
+font-size: 1.3rem;
+margin-bottom: 0.3em;
+color: #222;
+}
+
+
+.flex_amount h4 {
+color: #222;
+}
+
+.fa-shopping-cart {
+color: #FFFFFF;
+}
+
+
+/* for When 
+Cart Empty */
+
+.div_flex {
+margin-top: -4.7em;
+}
+
+
+.div_flex p {
+margin-top: 2.3em;
+line-height: 1.1em;
+font-size: 0.9rem;
+}
+
+
+#cartItem_Img {
+width: 113px;
+max-width: 100%;
+margin-top: 2.3em;
+cursor: pointer;
+}
+
+
+.Produt_nCart span:first-child{
+color: rgb(64, 190, 64);
+}
+
+
+
+@media (max-width: 321px) {
+
+.flex_about img {
+width: 83px;
+margin-bottom: -0.3em;
+}
+
+#cart_container .cart_items_h2 {
+font-size: 1.2rem;
+text-align: start;
+margin-left: 1.7em;
+}
+
+.cart_flex {
+display: grid;
+margin: auto;
+padding: 17px;
+width: 100%;
+grid-template-columns: repeat(1, 1fr);
+}
+
+.cart_flex .second_contain .quantity_update {
+display: flex;
+justify-content: start;
+margin-left: 0em;
+margin-top: 1.3em;
+}
+
+.div_flex p {
+line-height: 1.3em;
+}
+
+.flex_amount h2 {
+line-height: 1.8em;
+}
+
+
+.flx_cart .Cart_heads {
+display: none;
+}
+
+#cart_container {
+width: 100%;
+}
+
+.cart_flex {
+flex-direction: column;
+text-align: start;
+margin-top: 2.1em;
+line-height: 1.7em;
+width: 90%;
+gap: 0.7em;
+border-radius: 13px;
+}
+
+.flex_amount {
+flex-direction: column;
+line-height: 2em;
+height: 167px;
+padding: 11px;
+}
+
+.flex_amount button {
+display: flex;
+justify-content: center;
+width: 77%;
+padding: 17px;
+left: 0;
+left: 50%;
+transform: translateX(-50%);
+right: 1em;
+margin-top: 1.3em;
+border-radius: 7px;    
+}
+
+.flex_amount h1 {
+font-size: 1.3rem;
+font-weight: normal;
+}
+
+
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+
+/* ...
+When Cart Empty ..  */
+
+
+#cartItem_Img {
+width: 97px;
+max-width: 100%;
+}
+
+.flex_about img {
+width: 83px;
+margin-bottom: -0.7em;
+}
+
+.cart_flex {
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+margin: auto;
+padding: 17px;
+line-height: 1.7em;
+}
+
+
+.cart_flex .second_contain .quantity_update {
+display: flex;
+justify-content: start;
+margin-left: 0em;
+margin-top: 1.3em;
+}
+
+.div_flex p {
+line-height: 1.2em;
+}
+
+.flx_cart .Cart_heads {
+display: none;
+}
+
+#cart_container {
+width: 100%;
+}
+
+.cart_flex {
+flex-direction: column;
+width: 90%;
+height: auto;
+gap: 0.7em;
+text-align: start;
+margin-top: .9em;
+line-height: 1.7em;
+border-radius: 13px;
+}
+
+
+#cart_container .cart_items_h2 {
+font-size: 1.3rem;
+text-align: center;
+width: 87%;
+margin: auto;
+margin-top: -3em;
+margin-bottom: .5em;
+}
+
+
+.flex_amount {
+flex-direction: column;
+height: 167px;
+padding: 11px;
+line-height: 2em;
+margin-top: 1.7em;
+}
+
+
+.flex_amount button {
+display: flex;
+justify-content: center;
+width: 77%;
+padding: 17px;
+left: 0;
+left: 50%;
+transform: translateX(-50%);
+right: 1em;
+margin-top: 1.7em;
+border-radius: 7px;
+}
+
+
+.flex_amount h1 {
+font-size: 1.3rem;
+font-weight: normal;
+padding: 7px;
+}
+
+
+.flex_amount section {
+margin-top: 1.7em;
+left: 0;
+text-align: center;
+}
+
+
+.flex_amount h2 {
+width: 85%;
+margin: auto;
+line-height: 1.8em;
+margin-top: .7em;
+}
+
+
+.div_flex h1 {
+width: 70%;
+font-size: 1.3rem;
+line-height: 1.7em;
+margin: auto;
+}
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1500px) {
+
+
+.flx_cart .Cart_heads {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+width: 100%;
+}
+
+.cart_flex {
+padding: 11px;
+margin-top: .7em;
+}
+
+
+#cart_container .cart_items_h2 {
+margin-left: 0.3em;
+font-size: 1.2rem;
+text-align: start;
+}
+
+.remove_bntContainer {
+margin: -0.3em 0.8em 0em 0.8em;
+}
+
+
+.cart_flex .second_contain .quantity_update {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1em;
+}
+
+.Produt_nCart {
+margin: 0em 0.7em 0em 0.7em;
+}
+
+.flex_amount h1 {
+font-size: 1.2rem;
+}
+
+.flex_amount button {
+font-size: 0.9rem;
+margin-top: .7em;
+border-radius: 7px;
+}
+
+.flex_amount h2 {
+text-align: end;
+}
+
+#cart_container {
+width: 91%;
+margin: auto;
+margin-top: 10.7em;
+}
+
+.flex_amount {
+margin-bottom: 8.7em;
+}
+
+}
+

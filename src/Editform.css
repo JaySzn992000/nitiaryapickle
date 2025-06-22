@@ -1,0 +1,151 @@
+/* Done */
+
+/* Eye Password */
+
+.password-container {
+position: relative;
+}
+
+
+.password-input-wrapper {
+position: relative;
+display: flex;
+align-items: center;
+}
+
+
+.password-input-wrapper input {
+width: 100%;
+padding-right: 30px; 
+}
+
+
+.password-toggle {
+position: absolute;
+right: 10px;
+cursor: pointer;
+color: #666;
+}
+
+
+.password-toggle:hover {
+color: #333;
+}
+
+
+/*  */
+
+.flex_containerForm {
+display: flex;
+justify-content: center;
+text-align: start;
+line-height: 1.7em;
+gap: 2.7em;
+width: 1024px;
+margin: auto;
+padding-bottom: 37px;
+
+}
+
+
+/* Responsive 
+form elements */
+
+.hOp_edit {
+display: flex;
+justify-content: center;
+position: relative;
+color: rgb(0, 0, 0);
+align-items: center;
+left: 50%;
+transform: translateX(-50%);
+width: 93px;
+height: 93px;
+border-radius: 50%;
+margin-top: -2.3em;
+background-color: rgb(240, 128, 128);
+font-size: 1.4rem;
+}
+
+
+
+.Frm_edit input {
+background-color: rgb(238, 241, 245);
+border: none;
+border: 1px solid rgb(240, 232, 232);
+border-radius: 3px;
+outline: none;
+padding: 13px 23px 13px 15px;
+}
+
+.Frm_edit h4 {
+font-size: 0.9rem;
+margin: 1em 0em 1em 0em;
+}
+
+.Frm_edit button {
+border: none;
+background-color: rgb(188, 143, 143);
+width: 117px;
+padding: 15px;
+margin-top: 2.5em;
+cursor: pointer;
+color: rgba(255, 255, 255, 0.97);
+}
+
+.Header_position {
+margin-top: 9.7em;
+}
+
+
+
+@media (max-width: 768px) {
+
+.flex_containerForm {
+display: block;
+width: 100%;
+text-align: center;
+}
+
+
+.Frm_edit input {
+width: 55%;
+}
+
+.hOp_edit {
+width: 94px;
+height: 94px;
+}
+
+.password-toggle {
+position: relative;
+right: 27px;
+cursor: pointer;
+color: #666;
+}
+
+.password-input-wrapper {
+justify-content: center;
+}
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1036px) {
+
+.flex_containerForm {
+width: 100%;
+}
+
+.hOp_edit {
+width: 104px;
+height: 104px;
+}
+
+.password-input-wrapper {
+justify-content: center;
+}
+
+}
+
+

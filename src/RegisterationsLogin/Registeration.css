@@ -1,0 +1,106 @@
+/* Done */
+
+/* ... Outer 
+div_Container .. */
+
+.flex_regis_Container {
+width: 77%;
+margin: auto;
+margin-top: 5.7em;
+margin-bottom: 7.7em;
+justify-content: center;
+}
+
+
+.flex_regis_Container h1 {
+margin-bottom: -0.4em;
+}
+
+.flex_form input {
+width: 277px;
+padding: 11px;
+outline: none;
+border: 1px solid #DCDCDC;
+}
+
+
+.flex_form {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1em;
+width: 100%;
+margin-top: -1em;
+text-align: start;
+}
+
+
+.flex_form div {
+line-height: .5em;
+}
+
+.register_form button {
+width: 17%;
+padding: 17px;
+margin-top: 3.1em;
+border: none;
+cursor: pointer;
+color: #FFFFFF;
+background-color: #bc8f8f;
+}
+
+
+.register_form h1,
+h3,
+span {
+font-weight: normal;
+}
+
+.register_form h1 {
+font-size: 1.5rem;
+margin-bottom: -.7em;
+}
+
+.register_form h3 {
+font-size: 1rem;
+margin-bottom: 1.3em;
+color: #000000;
+}
+
+.register_form span {
+color: #4169E1;
+margin-left: 0.5em;
+cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+
+.flex_regis_Container {
+text-align: center;
+width: 85%;
+}
+
+
+.flex_form {
+gap: 0.5em;
+}
+
+.flex_form input {
+width: 100%;
+}
+
+.flex_regis_Container h1 {
+font-size: 1.1rem;
+}
+
+.flex_regis_Container h3 {
+font-size: 0.9rem;
+}
+
+.register_form button {
+width: 100%;
+}
+
+}

@@ -1,0 +1,97 @@
+.admin-profile-container {
+display: flex;
+width: 100%;
+padding-top: 97px;
+flex-direction: column;
+align-items: center;
+text-align: center;
+background-repeat: no-repeat;
+background-size: cover; 
+background-position: center;
+}
+
+
+.admin-avatar h2 {
+color: #000000;
+margin-bottom: .8em;
+}
+
+
+.circle-avatar {
+background-color: #f08080;
+width: 93px;
+height: 93px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 1.8em;
+margin-top: 1.7em;
+}
+
+
+.circle-avatar h1 {
+color: #FFFFFF;
+font-size: 2rem;
+}
+
+
+.admin-info-box h2 {
+margin: 0.3em 0;
+font-weight: 600;
+color: #333;
+width: 100%;
+margin: auto;
+line-height: 1.9em;
+font-size: 1.2rem;
+word-break: break-all;
+font-weight: normal;
+}
+
+
+
+.flx_adminPr {
+display: flex;
+justify-content: center;
+gap: 1.2em;
+line-height: 3.3em;
+}
+
+
+.flx_adminPr li {
+color: #808080;
+cursor: pointer;
+}
+
+
+.flx_adminPr i {
+font-size: 1.3rem;
+color: rgb(193, 188, 188);
+line-height: 2.5em;
+cursor: pointer;
+}
+
+
+.password-section {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 0.7em;
+font-size: 1.1rem;
+margin: 1em 0;
+margin-top: 1.5em;
+}
+
+
+.password-section p {
+font-size: 1rem;
+}
+
+
+.password-section span {
+cursor: pointer;
+color: #888;
+margin-top: .4em;
+margin-left: .5em;
+}
+

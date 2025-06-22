@@ -1,0 +1,101 @@
+/* Done */
+
+.admin-forget-container{
+width: 341px;
+max-width: 341px;
+width: 100%;
+text-align: start;
+background: #ffffff;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+height: 577px;
+padding: 27px;
+padding-top: 37px;
+border-radius: 5px;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);   
+}
+
+
+.admin-forget-container input {
+border: 0.5px solid #e6e0e0;
+}
+
+
+.admin-forget-container button {
+margin-top: 0.9em;
+margin-bottom: .8em;
+background: linear-gradient(135deg, #4c84ff, #6ae7f5);
+color: #fff;
+padding: 15px;
+border-radius: 7px;
+border: none;
+font-size: 0.9rem;
+transition: background 0.3s ease;
+cursor: pointer;
+width: 50%;
+}
+
+
+.admin-forget-container h2 {
+font-size: 1.1rem;
+margin-top: .3em;
+text-align: center;
+}
+
+
+.admin-forget-container h3 {
+margin-top: .5em;
+margin-bottom: .6em;
+font-size: 1rem;
+}
+
+
+.admin-forget-container .backLogin {
+margin-top: .9em;
+margin-left: .3em;
+cursor: pointer;
+}
+
+
+.admin-forget-form h2 {
+color: #333;
+margin-bottom: 2.1em;
+}
+
+
+.admin-forget-form p {
+font-size: 0.8rem;
+margin-top: -1.4em;
+text-align: center;
+line-height: 1.7em;
+color: #808080;
+}
+
+
+
+
+@media (max-width : 768px) {
+
+
+.admin-forget-container {
+width: 85%;
+height: 547px;
+line-height: 1em;
+padding: 15px;
+padding-top: 31px;
+margin-top: 2.1em;
+border-radius: 3px;
+}
+
+.form-group h3 {
+font-size: .9rem;
+}
+
+.admin-forget-form h2 {
+font-size: 1rem;
+}
+
+
+}

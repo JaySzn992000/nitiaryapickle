@@ -1,0 +1,109 @@
+/* Done */
+
+.normal_header .div_header {
+display: flex;
+justify-content: center;
+text-align: start;
+margin-top: 5.7em;
+height: auto;
+gap: 5.3em;
+padding-top: 77px;
+padding-bottom: 207px;
+z-index: -999;
+background-color: #202434;
+}
+
+
+.normal_header h3 {
+font-weight: normal;
+color: #FFFFFF;
+margin-bottom: .8em;
+}
+
+.normal_header .div_header .nMheader_dvLogo {
+width: 167px;
+margin-top: .9em;
+margin-left: -2.7em;
+margin-right: -3.7em;
+}
+
+
+.normal_header ul {
+line-height: 3.4em;
+}
+
+.normal_header ul li {
+font-size: 0.9rem;
+color: #808080;
+cursor: pointer;
+transition: 0.5s;
+}
+
+.normal_header ul li:hover {
+color: #f8a424;
+}
+
+
+.socialMedia {
+display: flex;
+gap: 1.2em;
+margin-top: .9em;
+}
+
+
+.socialMedia img {
+width: 27px;
+cursor: pointer;
+}
+
+
+@media (max-width: 925px) {
+
+.normal_header {
+height: 955px;
+margin-top: -4.3em;
+}
+
+.normal_header .div_header {
+flex-direction: column;
+padding-left: 37px;
+width: 100%;
+gap: 0em;
+}
+
+.normal_header .div_header .nMheader_dvLogo {
+width: 137px;
+margin: 2.7em 0em -.5em -0.9em;
+}
+
+.normal_header ul {
+line-height: 3.1em;
+}
+
+.normal_header ul li {
+font-size: 0.8rem;
+}
+
+.normal_header ul h3 {
+font-size: 1rem;
+}
+
+}
+
+/*  */
+
+@media (min-width: 925px) and (max-width: 1519px) {
+
+.normal_header .div_header .nMheader_dvLogo {
+width: 137px;
+}
+
+.normal_header .div_header {
+gap: 2.7em;
+}
+
+.normal_header ul li {
+font-size: 0.8rem;
+}
+
+}

@@ -1,0 +1,239 @@
+/* Done */
+
+iframe {
+border: none;
+}
+
+.form_contact {
+display: flex;
+justify-content: center;
+padding: 2.7em;
+gap: 4.7em;
+margin: 4.1em auto 0;
+text-align: start;
+}
+
+
+.form_contact input,
+.form_contact textarea {
+width: 357px;
+padding: 0.9em;
+padding-left: 21px;
+margin-top: 0.7em;
+outline: none;
+border-radius: 21px;
+font-size: .9rem;
+border: 1px solid rgb(169, 163, 163);
+}
+
+
+.form_contact input:focus,
+.form_contact textarea:focus {
+border-color: #10204f;
+box-shadow: 0 0 0 2px rgba(16, 32, 79, 0.1);
+}
+
+
+.form_contact textarea {
+padding: 1.5em;
+min-height: 140px;
+resize: vertical;
+}
+
+
+.form_contact button {
+width: 100%;
+padding: 1.3em;
+border-radius: 27px;
+border: none;
+outline: none;
+cursor: pointer;
+font-size: 0.9rem;
+margin: 2.3em 0em 0.7em 0em;
+color: #000000;
+background-color: #ffec54;
+transition: background 0.3s ease, transform 0.3s ease;
+}
+
+
+.form_contact button:hover {
+background-color: rgba(11, 93, 11, 0.685);
+color: #fff;
+transform: translateY(-5px);
+}
+
+
+.form_contact h1:first-child {
+color: #10204f;
+font-size: 2.3rem;
+line-height: 1.5em;
+margin-bottom: 0.7em;
+}
+
+
+.form_contact img {
+width: 507px;  
+height: auto;
+max-width: 100%;
+object-fit: cover;
+border-radius: 3px;
+cursor: pointer;
+}
+
+
+.hideInput_Contact {
+display: none;
+}
+
+
+.success_message {
+text-align: center;
+}
+
+
+.about_flex_contct {
+display: flex;
+flex-direction: column;
+}
+
+
+.about_flex_contct .iframeMap{
+width: 90vw;
+height: 343px;
+margin: auto;
+margin-top: 3.7em;
+}
+
+
+.out_location {
+width: 70vw;
+text-align: center;
+margin: auto;
+margin-top: 6.3em;
+}
+
+
+.about_flex_contct div p {
+width: 70vw;
+margin-top: -.6em;
+line-height: 2.5em;
+text-align: center;
+color: rgb(128, 128, 128);
+}
+
+
+.about_flex_contct div h2 {
+margin-bottom: -.2em;
+font-size: 2.1rem;
+}
+
+
+.about_flex_contct div {
+line-height: 1.3em;
+}
+
+
+.success_message {
+color: rgb(250, 4, 4);
+}
+
+
+
+@media (max-width: 1024px) {
+
+.form_contact {
+width: 90vw;
+flex-direction: column;
+margin: 3.7em auto 0;
+text-align: center;
+padding: 0;
+}
+
+
+.form_contact .form_div {
+width: 90vw;
+padding: 1.5em;
+margin-top: -1.7em;
+}
+
+
+.form_contact img {
+width: 100%;
+margin: auto;
+margin-left: 0;
+}
+
+.form_contact input {
+width: 85%;
+}
+
+.form_contact textarea {
+width: 90%;
+}
+
+
+.form_contact button {
+width: 55%;
+font-size: 0.9rem;
+padding: 1.1em;
+}
+
+
+.form_contact h1:first-child {
+font-size: 1.7rem;
+line-height: 1.8em;
+text-align: center;
+margin-top: -.5em;
+}
+
+
+.about_flex_contct .iframeMap {
+width: 100%;
+}
+
+
+.about_flex_contct div{
+width: 85%;
+margin: auto;
+text-align: center;
+margin-top: 1.7em;
+}
+
+.about_flex_contct div p {
+width: 100%;
+text-align: justify;
+margin-top: -.3em;
+}
+
+.about_flex_contct div h2 {
+font-size: 1.6rem;
+}
+
+}
+
+
+/*  */
+
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+
+.form_contact {
+width: 100%;
+gap: 4.7vw;
+}
+
+.about_flex_contct .iframeMap {
+width: 90vw;
+}
+
+.about_flex_contct div p {
+width: 100%;
+text-align: center;
+margin-top: 0.7em;
+}
+
+.about_flex_contct div h2 {
+margin-bottom: .3em;
+}
+
+}

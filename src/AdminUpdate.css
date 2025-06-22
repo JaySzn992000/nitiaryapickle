@@ -1,0 +1,152 @@
+
+
+.admin-adminUpdate-form {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+background: #ffffff;
+padding: 21px;
+padding-top: 57px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+width: 100%;
+max-width: 327px;
+height: 517px;
+text-align: center;
+border-radius: 17px;
+transition: transform 0.3s ease-in-out;
+}
+
+
+.admin-adminUpdate-form h2 {
+font-size: 1.1rem;
+text-align: start;
+margin-bottom: 1.1em;
+text-align: center;
+}
+
+
+#adminupdatePTg {
+color: #808080;
+line-height: 1.7em;
+font-size: 0.8rem;
+}
+
+
+.admin-adminUpdate-form label {
+font-weight: normal;
+}
+
+.form-group {
+position: relative;
+margin-bottom: 17px;
+text-align: start;
+}
+
+
+label {
+display: block;
+margin-bottom: 8px;
+font-weight: 600;
+font-size: 0.9rem;
+color: #333;
+}
+
+
+.form-input {
+width: 100%;
+padding: 9px 15px;
+padding-left: 17px;
+font-size: 0.9rem;
+color: #808080;
+border: 1px solid #ddd;
+border-radius: 5px;
+outline: none;
+transition: all 0.3s ease;
+}
+
+.form-input:focus {
+border-color: #4c84ff;
+box-shadow: 0 0 0 2px rgba(76, 132, 255, 0.2);
+}
+
+.input-error {
+border-color: rgb(255, 0, 0);
+}
+
+.error-text {
+color: rgb(255, 0, 0);
+font-size: 12px;
+margin-top: 1.3em;
+}
+
+.password-group {
+position: relative;
+}
+
+.password-input-wrapper {
+position: relative;
+}
+
+.eye-icon {
+position: absolute;
+top: 63%;
+right: 14px;
+transform: translateY(-50%);
+cursor: pointer;
+color: #888;
+}
+
+.eye-icon:hover {
+color: #4c84ff;
+}
+
+.register-button {
+margin-top: 1.7em;
+background: linear-gradient(135deg, #4c84ff, #6ae7f5);
+color: #fff;
+padding: 14px;
+border: none;
+border-radius: 7px;
+font-size: 0.9rem;
+cursor: pointer;
+transition: background 0.3s ease;
+width: 50%;
+}
+
+.register-button:hover {
+background: linear-gradient(135deg, #6ae7f5, #4c84ff);
+box-shadow: 0 4px 15px rgba(76, 132, 255, 0.3);
+}
+
+.login-message {
+font-size: 0.9rem;
+color: #555;
+text-align: center;
+margin-top: 1.5em;
+}
+
+.form-group input {
+margin-top: .5em;
+}
+
+
+@media (max-width: 480px) {
+
+.admin-adminUpdate-form {
+width: 90%;
+height: 517px;
+padding: 20px;
+padding-top: 57px;
+}
+
+.admin-adminUpdate-form h2 {
+font-size: 1.2rem;
+}
+
+.form-input,
+.register-button {
+font-size: 0.9rem;
+}
+
+}

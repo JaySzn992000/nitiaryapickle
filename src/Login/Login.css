@@ -1,0 +1,108 @@
+/* Done */
+
+#logged_form {
+width: 300px;
+margin: auto;
+margin-top: 6.3em;
+line-height: 2.9em;
+text-align: center;
+}
+
+#logged_form h2 {
+margin-bottom: 0.5em;
+font-size: 1.4rem;
+color: #808080;
+}
+
+#logged_form h4 {
+color: #000000;
+}
+
+
+#logged_form #fg_pass {
+margin-top: 1.4em;
+color: #ff0000;
+cursor: pointer;
+}
+
+
+#logged_form input {
+width: 100%;
+padding: 11px;
+padding-left: 17px;
+outline: none;
+border: none;
+border: 1px solid rgb(239, 231, 231);
+}
+
+
+#logged_form button {
+width: 60%;
+padding: 11px;
+margin-top: 1.3em;
+border: none;
+line-height: 1.7em;
+color: #FFFFFF;
+background-color: #bc8f8f;
+cursor: pointer;
+font-size: 0.9rem;
+}
+
+
+.message_forget  p {
+margin-top: 1.7em;
+margin-left: 2.9em;
+}
+
+
+.password-wrapper {
+position: relative;
+width: 100%;
+}
+
+.password-wrapper input {
+width: 100%;
+padding: 10px;
+padding-right: 40px;
+box-sizing: border-box;
+}
+
+
+.eye-icon {
+position: absolute;
+right: 13px;
+top: 57%;
+transform: translateY(-50%);
+cursor: pointer;
+color: #555;
+font-size: 18px;
+}
+  
+
+@media (max-width: 768px) {
+
+#logged_form {
+width: 80%;
+line-height: 2.7em;
+margin: auto;
+margin-top: 4.7em;
+margin-bottom: 7.3em;
+}
+
+#logged_form h2 {
+font-size: 1.2rem;
+}
+
+#logged_form input {
+width: 100%;
+}
+
+#logged_form #fg_pass {
+margin-top: 1.1em;
+}
+
+#logged_form button {
+margin-top: .5em;
+}
+
+}

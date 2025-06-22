@@ -1,0 +1,594 @@
+/* Done .. */
+
+
+/* Password Eye's 
+Hide */
+
+
+.password-field {
+position: relative;
+display: flex;
+align-items: center;
+}
+
+
+.password-field input {
+width: 100%;
+padding-right: 30px; 
+}
+
+
+.eye-icon {
+position: absolute;
+right: 10px;
+cursor: pointer;
+user-select: none;
+}
+
+
+.btn_trending {
+margin-top: 4.3em;
+}
+
+
+.btn_trending section {
+display: flex;
+justify-content: center;
+gap: 0.7em;
+}
+
+
+.btn_trending h2 {
+margin-bottom: 1.5em;
+}
+
+
+.btn_trending button {
+width: 153px;
+padding: 14px;
+margin-bottom: 1.7em;
+background-color: #ffec54;
+color: #000000;
+border: none;
+border-radius: 23px;
+transition: 0.5s;
+cursor: pointer;
+}
+
+
+.btn_trending button:hover {
+color: #d35400;
+}
+
+
+.seeLLProducts {
+padding: 16px 43px;
+margin-bottom: 3.1em;
+background: linear-gradient(to right, #facc15, #b91c1c); 
+color: #FFFFFF;
+font-weight: 600;
+border: none;
+border-radius: 9999px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease-in-out;
+cursor: pointer;
+}
+
+
+.seeLLProducts:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.tshirt_Left {
+/* width: 1124px;
+margin: 0 auto; */
+margin-top: 1.7em;
+margin-bottom: 1.3em;
+transform: translateX(-8.74%);
+}
+
+
+/* Best 
+Selling Gifts TExts */
+
+.Bst_sell {
+line-height: 3.1em;
+height: auto;
+padding: 27px;
+margin-top: -1.7em;
+margin-bottom: 1.7em;
+}
+
+
+.p_head {
+margin-top: 3.3em;
+padding: 0px;
+line-height: 2.3em;
+background-color: #ffec54;
+}
+
+/*  */
+
+.Catelog_Items {
+display: flex;
+width: 80%;
+margin: auto;
+justify-content: center;
+gap: 1.7em;
+margin-top: 4.1em;
+margin-bottom: 3.3em;
+flex-wrap: nowrap;
+overflow: hidden;
+}
+
+
+.Catelog_ItemsScnd {
+margin-top: 4.7em;
+}
+
+
+.Catelog_Items img {
+width: 107px;
+height: 107px;
+border: 1px solid #DCDCDC;
+border-radius: 50%;
+cursor: pointer;
+}
+
+
+.Catelog_Items div {
+line-height: 2.3em;
+text-align: center;
+flex-shrink: 0;
+}
+
+/*  */
+
+.img_bannerOne {
+margin-top: 2.7em;
+}
+
+/*  */
+
+.Icon_ItemsHome {
+display: flex;
+justify-content: center;
+gap: 1.3em;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+cursor: grab;
+user-select: none;
+width: 90%;
+padding-bottom : .3em;
+margin: auto;
+box-sizing: border-box;
+}
+
+
+
+.Icon_ItemsHome div {
+display: flex;
+align-items: center;
+scroll-snap-align: start;
+background: #fff;
+padding: 13px;
+padding-right: 47px;
+text-align: start;
+gap: 2.3em;
+line-height: 1.9em;
+border-radius: 7px;
+margin-top: 4.3em;
+box-shadow: 0 0 10px rgba(15, 13, 13, 0.119);
+}
+
+
+.Icon_ItemsHome::-webkit-scrollbar {
+display: none;
+}
+
+
+.grabbing {
+cursor: grabbing;
+}
+
+
+.Icon_ItemsHome img {
+width: 57px;
+height: 57px;
+border-radius: 50%;
+margin-right: -0.7em;
+}
+
+
+
+.Icon_ItemsHome h4 {
+font-weight: bold;
+}
+
+
+#what_Cust {
+margin-top: 4.7em;;
+margin-bottom: -1.5em;
+font-size: 1.3rem;
+color: #000000;
+padding: 9px;
+background-color: #ffec54;
+}
+
+
+
+.whatsapp_message {
+position: fixed;
+width: 63px;
+height: 63px;
+bottom: 3.1em;
+left: 41px;
+border-radius: 50%;
+cursor: pointer;
+z-index: 9999;
+}
+
+
+.Secure_ordering {
+width: 100%;
+max-width: 977px;
+margin: auto;
+padding: 1em;
+box-sizing: border-box;
+border-radius: 13px;
+margin-top: 1.7em;
+margin-bottom: 4.3em;
+}
+
+.Secure_ordering img {
+width: 100%;
+height: auto;
+}
+
+
+.subscribe_k {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: auto;
+margin-top: 8.7em;
+margin-bottom: -8.9em;
+width: 80%;
+padding: 15px 27px 13px 37px;
+position: relative;
+background-color: rgb(251, 222, 238);
+border-radius: 57px;
+}
+
+.subscribe_k h2 {
+text-align: start;
+}
+
+.success_message {
+margin-bottom: 0.7em;
+color: rgb(255, 0, 0);
+}
+
+.subscribe_flx {
+display: flex;
+gap: 0.7em;
+line-height: 2.5em;
+text-align: start;
+}
+
+.subscribe_flx button {
+cursor: pointer;
+}
+
+.subscribe_k img {
+width: 34px;
+margin-right: 1.1em;
+}
+
+
+.subscribe_k button {
+background-color: rgb(72, 186, 72);
+color: #FFFFFF;
+width: 137px;
+height: 41px;
+border-radius: 43px;
+border: none;
+margin-left: -4.7em;
+margin-top: 0.2em;
+}
+
+
+.subscribe_k input {
+width: 317px;
+border: none;
+border: 1px solid #DCDCDC;
+border-radius: 27px;
+outline: none;
+border: none;
+height: 48px;
+padding-left: 27px;
+}
+
+
+@media (max-width: 468px) {
+
+.DlvyImg {
+height: 107px;
+}
+
+}
+
+
+@media (max-width: 768px) {
+
+
+#what_Cust {
+line-height: 1.7em;
+font-size: 1rem;
+padding: 11px;
+width: 100%;
+margin: auto;
+margin-top: 3.7em;;
+margin-bottom: -2.7em;
+}
+
+.Catelog_Items {
+display: flex;
+width: 95%;
+gap: 0.5em;
+overflow-x: auto;
+scroll-behavior: smooth;
+cursor: grab;
+justify-content: flex-start;
+margin-top: 3.5em;
+margin-bottom: 2.7em;
+}
+
+
+.Catelog_Items img {
+width: 83px;
+height: 83px;
+border: 1px solid #DCDCDC;
+border-radius: 50%;
+}
+
+.Catelog_Items h4 {
+font-size: 0.8rem;
+}
+
+
+.Catelog_Items::-webkit-scrollbar {
+display: none;
+}
+
+
+.tshirt_Left {
+width: 100%;
+margin-top: 3.3em;
+transform: translateX(0%);
+}
+
+
+.Icon_ItemsHome {
+padding: 0em;
+display: flex;
+justify-content: start;
+gap: .7em;
+width: 90%;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+}
+
+
+.Icon_ItemsHome p{
+width: 165px;
+font-size: .8rem;
+}
+
+
+.Icon_ItemsHome div {
+box-shadow: 0 0 10px rgba(26, 7, 7, 0.1);
+border-radius: 7px;
+margin-bottom: .7em;
+padding: 5px;
+gap: 1.3em;
+}
+
+
+.p_head {
+margin-top: 3.1em;
+padding: 7px 5px 5px 8px;
+}
+
+.Secure_ordering {
+width: 95%;
+margin-top: .7em;
+margin-bottom: 3.1em;
+}
+
+
+.Secure_ordering img {
+width: 100%;
+height: 57px;
+}
+
+
+.subscribe_k {
+width: 93%;
+padding: 0;
+padding: 17px 21px 17px 31px;
+border-radius: 37px;
+flex-direction: column;
+position: relative;
+}
+
+.subscribe_k input {
+width: 100%;
+padding-left: 17px;
+}
+
+.subscribe_flx {
+width: 100%;
+line-height: 2.5em;
+}
+
+.subscribe_flx h2 {
+font-size: 1.4rem;
+}
+
+.subscribe_flx p {
+margin-bottom: 0.7em;
+}
+
+.img_bannerOne {
+width: 100%;
+height: 71px;
+margin-top: 1.7em;
+}
+
+.btn_trending {
+width: 93%;
+height: auto;
+margin: auto;
+margin-top: 3.7em;
+}
+
+.btn_trending section {
+margin-top: 1.9em;
+gap: .2em;
+}
+
+.btn_trending h2 {
+font-size: 1.2rem;
+margin-top: -.5em;
+}
+
+
+.Bst_sell {
+line-height: 2.7em;
+margin-bottom: 1.3em;
+}
+
+
+.Bst_sell h2 {
+font-size: 1.3rem;
+}
+
+
+.btn_trending button {
+width: 127px;
+padding: 7px;
+margin-top: -0.1em;
+line-height: 1.7em;
+}
+
+.whatsapp_message {
+width: 57px;
+height: 57px;
+margin-left: -.9em;
+margin-bottom: -.7em;
+}
+
+
+}
+
+
+@media (min-width : 460px) and (max-width : 768px) {
+
+.btn_trending button {
+width: 177px;
+margin-top: -0.1em;
+line-height: 1.7em;
+}
+
+}
+
+/*  */
+
+@media (min-width: 768px) and (max-width: 1519px) {
+
+.Catelog_Items h4 {
+font-size: 0.8rem;
+}
+
+.Catelog_Items img {
+width: 107px;
+height: 107px;
+}
+
+.btn_trending section {
+display: flex;
+justify-content: center;
+width: 100%;
+margin: auto;
+margin-top: 2.3em;
+gap: 0.5em;
+}
+
+
+.tshirt_Left {
+width: 100%;
+transform: translateX(0%);
+}
+
+
+.tshirt_Left .flex_productlist {
+width: 100%;
+transform: translateX(0%);
+gap: 0.4em;
+}
+
+.Catelog_Items {
+display: flex;
+overflow-x: auto;
+gap: 1.7em;
+width: 85%;
+margin: auto;
+margin-top: 3.7em;
+margin-bottom: 2.7em;
+scroll-behavior: smooth;
+justify-content: flex-start;
+cursor: grab;
+}
+
+.Catelog_Items::-webkit-scrollbar {
+display: none;
+}
+
+.Icon_ItemsHome {
+display: flex;
+justify-content: start;
+white-space: nowrap;
+gap: 0.7em;
+padding: 0em;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+}
+
+.Icon_ItemsHome div {
+margin-bottom: .7em;
+}
+
+.p_head {
+margin-top: 2.7em;
+}
+
+.subscribe_k {
+width: 81%;
+padding: 13px 27px 13px 37px;
+border-radius: 57px;
+}
+
+.subscribe_k input {
+width: 100%;
+padding-left: 17px;
+}
+
+.subscribe_flx h2 {
+font-size: 1.4rem;
+margin-right: 1.7em;
+}
+
+}

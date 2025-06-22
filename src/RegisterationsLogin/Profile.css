@@ -1,0 +1,192 @@
+.flex_Profile_ {
+display: flex;
+margin-top: -4.3em;
+justify-content: center;
+cursor: pointer;
+}
+
+.bgProfile {
+height: 47vh;
+box-shadow: 0 4px 6px rgba(105, 105, 105, 0.101);
+}
+
+.profile_navi {
+margin-top: 1.7em;
+line-height: 3.3em;
+}
+
+.flex_Profile_ i {
+font-size: 1.3rem;
+margin-right: 0.5em;
+color: rgb(199, 188, 188);
+}
+
+.Sign_out i {
+font-size: 1.3rem;
+color: rgb(199, 188, 188);
+}
+
+
+.flex_prf_ {
+display: flex;
+align-items: center;
+gap: 1em;
+margin-top: 1.3em;
+justify-content: center;
+}
+
+.edit_flex .fa-envelope {
+margin-top: .7em;
+}
+
+.n_profile .circle_pr {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+padding: 33px;
+width: 93px;
+height: 93px;
+border-radius: 50%;
+background-color: #F08080;
+}
+
+.prname {
+color: #000000;
+}
+
+.af_name_user {
+width: 85%;
+margin: auto;
+color:#000000;
+padding: 13px;
+margin-top: -0.7em;
+margin-bottom: -.7em;
+line-height: 1.8em;
+}
+
+
+.profile_navi li {
+display: flex;
+align-items: center;
+gap: 1em;
+margin-top: 0.5em;
+font-size: 0.9rem;
+justify-content: center;
+color: rgb(64, 59, 59);
+}
+
+
+.edit_flex {
+margin-top: 2.7em;
+line-height: 1.2em;
+text-align: center;
+}
+
+
+.edit_flex p {
+word-wrap: break-word;
+word-break: break-word;
+font-size: 0.9rem;
+color: rgb(64, 59, 59);
+line-height: 2.7em;
+margin-bottom: -.9em;
+}
+
+
+.Sign_out {
+margin-top: 0.7em;
+text-align: center;
+}
+
+.Sign_out div {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1.3em;
+line-height: 4em;
+}
+
+
+.Sign_out div i,
+p {
+cursor: pointer;
+}
+
+.Sign_out h3 {
+color: #000000;
+font-size: 0.9rem;
+}
+
+.Sign_out p,
+li {
+color: rgb(64, 59, 59);
+}
+
+.item_history,
+.wishlist {
+margin-top: 1.5em;
+text-align: center;
+}
+
+
+.item_history h2,
+.wishlist h2 {
+margin-bottom: 0.5em;
+}
+
+.item_history ul,
+.wishlist ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+
+.item_history li,
+.wishlist li {
+margin-top: 0.5em;
+}
+
+
+
+@media (max-width: 768px) {
+
+.profile_navi li,
+p {
+font-size: 0.9rem;
+}
+
+.n_profile img {
+width: 27px;
+}
+
+.profile_navi img {
+width: 31px;
+}
+
+.n_profile .circle_pr {
+width: 85px;
+height: 85px;
+margin-top: 0.7em;
+}
+
+.item_history,
+.wishlist {
+margin-top: 1em;
+}
+
+.edit_flex p {
+width: 85%;
+}
+
+.flex_prf_ {
+gap: .7em;
+width: 100%;
+}
+
+.flex_prf_ p {
+width: 100%;
+}
+
+}

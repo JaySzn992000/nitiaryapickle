@@ -1,0 +1,720 @@
+/* Done .. */
+
+/* ... This is 
+for navBar ..  */
+
+.login_please{
+margin: .7em 0em .7em 0em;
+color: #ff0000;
+padding: 17px;
+cursor: pointer;
+}
+
+
+.Product_navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+height: 83px;
+padding: 7px 57px 7px 57px;
+z-index: 99999;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.052);
+background-color: #FFFFFF;
+transition: 0.3s;
+}
+
+
+.Product_navbar.scrolled {
+position: fixed;
+height: 87px;
+top: 0;
+}
+
+
+.Product_navbar .nav_ul {
+display: flex;
+gap: 1.7em;
+margin-left: 1.7em;
+}
+
+
+.div_ul .fa-angle-down {
+margin-top: 0.1em;
+font-size: 1.5rem;
+color: #202434;
+}
+
+
+.navSlider_flex .loggedDiv_nameEmail {
+line-height: 1.2em;
+}
+
+.loggedDiv_nameEmail li a {
+color: #000000;
+}
+
+.loggedDiv_nameEmail li {
+margin-top: .9em;
+}
+
+
+#CloseTag {
+position: absolute;
+width: 22px;
+margin-top: -0.5em;
+right: 3.7em;
+cursor: pointer;
+}
+
+
+.Product_navbar .flex_nav_ProfileSection img {
+width: 24px;
+cursor: pointer;
+}
+
+.Product_navbar .nav_profileSection li a {
+color: #000000;
+}
+
+
+.Product_navbar .fa-heart {
+font-size: 1.5rem;
+margin-right: 0.3em;
+}
+
+.navProduct_Slider li {
+font-size: 0.8rem;
+color: #202434;
+border-bottom: 1px solid #DCDCDC;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Product_navbar .div_ul {
+display: flex;
+align-items: center;
+gap: 0.6em;
+}
+
+.Product_navbar .div_ul li {
+font-size: 0.9rem;
+}
+
+.Product_navbar .div_ul li a {
+color: #000000;
+font-size: 0.9rem;
+}
+
+.Product_navbar .logo_img {
+width: 157px;
+height: auto;   
+z-index: 999;
+margin-top: 4.3em;
+cursor: pointer;
+}
+
+
+.fa_barsLogo_Container {
+display: flex;
+align-items: center;
+gap: 2.3em;
+}
+
+
+.nav_ul i {
+font-size: 0.9rem;
+margin-top: 0.3em;
+transition: 0.5s;
+cursor: pointer;
+}
+
+
+.nav_ul li a:hover {
+color: #f8a424;
+}
+
+
+/* ... This is for nav 
+Profile, heart, 
+Cart ...  Both  */
+
+
+.flex_nav_ProfileSection {
+display: flex;
+align-items: center;
+gap: 0.4em;
+}
+
+.fa-shopping-cart {
+margin-right: 0.3em;
+margin-left: 0.9em;
+}
+
+.flex_nav_ProfileSection .nav_profileSection {
+display: flex;
+align-items: center;
+gap: 0.7em;
+}
+
+.flex_nav_ProfileSection .nav_profileSection li a {
+font-size: 0.9rem;
+}
+
+/* ... This is For
+ Search Bar..  */
+
+.navProfile_ {
+margin-right: 1.1em;
+}
+
+
+.navProfile_ a {
+color: #000000;
+font-size: 0.9rem;
+}
+
+.flex_nav_ProfileSection .fa-search {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: -0.1em 0em 0em -2.1em;
+font-size: 1.1rem;
+color: rgb(179, 176, 176);
+height: 38px;
+z-index: 999;
+cursor: pointer;
+}
+
+.search_products {
+width: 0;
+padding: 11px;
+padding-left: 17px;
+border: none;
+outline: none;
+border-radius: 4px;
+transition: 0.3s;
+background: none;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+.afterSearch_prodct {
+width: 237px;
+border: 1px solid #DCDCDC;
+background-color: rgb(255, 255, 255);
+z-index: 999;
+}
+
+
+.fa-bars {
+width: 31px;
+cursor: pointer;
+}
+
+
+.navProduct_Slider {
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 321px;
+padding-bottom: 37px;
+max-height: 100vh;
+margin-left: -337px;
+padding-left: 17px;
+padding-right: 27px;
+height: 100vh;
+z-index: 99999;
+text-align: start;
+transition: 0.5s;
+overflow-y: auto;
+background-color: #ffffff;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.232);
+}
+
+
+.navProduct_Slider::-webkit-scrollbar {
+width: 4px;
+}
+
+.navProduct_Slider::-webkit-scrollbar-track {
+background-color: #202434;
+}
+
+.navProduct_Slider::-webkit-scrollbar-thumb {
+background-color: #202434;
+}
+
+.navProduct_Slider::-webkit-scrollbar-thumb:hover {
+background-color: #555;
+cursor: pointer;
+}
+
+
+.navSlider_flex {
+display: flex;
+align-items: center;
+margin: 0.8em 0em 0em 0.9em;
+gap: 1.3em;
+width: 95%;
+}
+
+
+.navSlider_flex .loggedDiv_nameEmail li {
+font-size: 0.9rem;
+line-height: 2.1em;
+word-wrap: break-word;
+word-break: break-word;
+box-sizing: border-box;
+list-style: none;
+}
+
+.flex_div_prfle {
+margin-top: 2.7em;
+}
+
+
+.flex_div_prfle .flex_icon_ {
+display: flex;
+align-items: center;
+height: 47px;
+gap: 1.3em;
+margin-top: 1.6em;
+margin-left: 0.8em;
+transition: 0.5s;
+}
+
+.flex_div_prfle .flex_icon_ li a {
+color: #000000;
+}
+
+
+.navProduct_Slider.active {
+margin-left: 0;
+}
+
+.navProduct_Slider.close {
+margin-left: -337px;
+}
+
+
+.Product_navbar .listing_Products {
+position: absolute;
+left: 0;
+width: 100%;
+height: auto;
+padding: 21px 30px 47px;
+padding-left: 253px;
+text-align: start;
+z-index: 999;
+opacity: 0;
+margin-top: 3.7em;
+line-height: 2.2em;
+background-color: #FFFFFF;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.232);
+pointer-events: none;
+transition: 0.5s;
+}
+
+.Product_navbar .hover_products {
+margin-top: 2.4em;
+padding-bottom: 33px;
+z-index: 999;
+}
+
+.Product_navbar .hover_products:hover .listing_Products {
+margin-top: 2.3em;
+opacity: 1;
+pointer-events: auto;
+}
+
+.Product_navbar .hover_products .listing_Products li {
+width: 10%;
+margin-top: 0.3em;
+color: #000000;
+border-bottom: 1px solid rgba(117, 50, 50, 0.192);
+}
+
+.Product_navbar .hover_products .listing_Products li a {
+color: #808080;
+}
+
+.Product_navbar .hover_products .listing_Products li a:hover {
+color: #f8a424;
+}
+
+
+.wishlist-count {
+position: absolute;
+margin-top: -1.7em;
+margin-left: 1.9em;
+border-radius: 50%;
+padding: 2px 6px;
+font-size: 11px;
+color: #FFFFFF;
+background-color: rgba(11, 93, 11, 0.685);
+cursor: pointer;
+}
+
+.cart-count {
+font-size: 11px;
+padding: 2px 6px;
+cursor: pointer;
+border-radius: 50%;
+margin-top: -1.7em;
+margin-left: -1.9em;
+color: #FFFFFF;
+background-color: rgba(11, 93, 11, 0.685);
+}
+
+
+@media (max-width: 321px) {
+
+#CloseTag {
+position: absolute;
+right: 2.7em;
+}
+
+
+.flex_nav_ProfileSection .fa-search {
+position: absolute;
+margin-top: -0.1em;
+right: .9em;
+}
+
+.flex_nav_ProfileSection {
+gap: 1.1em;
+}
+
+.search_products {
+display: none;
+}
+
+.afterSearch_prodct {
+display: block;
+position: absolute;
+width: 100%;
+left: 0;
+padding: 11px;
+padding-left: 17px;
+border-radius: 0px;
+border: 1px solid rgb(220, 220, 220);
+}
+
+.fa_barsLogo_Container {
+gap: 0.2em;
+}
+
+
+.Product_navbar .nav_ul {
+display: none;
+}
+
+.Product_navbar .logo_img {
+width: 97px;
+height: auto;
+}
+
+
+.navProduct_Slider {
+width: 90vw;
+}
+
+.flex_div_prfle {
+line-height: 2.5em;
+}
+
+.navSlider_flex .loggedDiv_nameEmail li {
+font-size: 0.8rem;
+}
+
+.navProduct_Slider li {
+font-size: 0.8rem;
+}
+
+.Product_navbar {
+height: 67px;
+}
+
+.Product_navbar.scrolled {
+height: 67px;
+}
+
+
+/* This is for
+ NavbarSlider */
+
+.navProduct_Slider li {
+word-wrap: break-word;
+word-break: break-word;
+}
+
+
+.flex_div_prfle .flex_icon_ {
+display: flex;
+gap: 1.3em;
+}
+
+.navProduct_Slider .navSlider_flex {
+gap: .8em;
+}
+
+.Product_navbar .flex_nav_ProfileSection img {
+width: 28px;
+cursor: pointer;
+}
+
+
+.Product_navbar .flex_nav_ProfileSection .fa-shopping-cart {
+margin-left: -4.7em;
+width: 23px;
+}
+
+/* NavBar 
+SLider */
+
+.navProduct_Slider .contact-us {
+margin-top: 1.2em;
+}
+
+.navProduct_Slider .sign_out {
+margin-top: 1.2em;
+}
+
+}
+
+
+@media (min-width: 321px) and (max-width: 768px) {
+
+.navProduct_Slider {
+width: 307px;
+}
+
+#CloseTag {
+position: absolute;
+margin-top: -0.2em;
+margin-right: -0.7em;
+}
+
+.search_products {
+display: none;
+}
+
+
+.flex_nav_ProfileSection .fa-search {
+position: absolute;
+margin-top: -0.1em;
+right: 1.3em;
+}
+
+.flex_nav_ProfileSection {
+gap: 0em;
+}
+
+.fa_barsLogo_Container {
+display: flex;
+align-items: center;
+gap: 0.2em;
+}
+
+.Product_navbar .nav_ul {
+display: none;
+}
+
+
+.Product_navbar {
+height: 67px;
+}
+
+.Product_navbar.scrolled {
+height: 67px;
+}
+
+
+.navProduct_Slider .navSlider_flex .loggedDiv_nameEmail li {
+font-size: 0.8rem;
+word-wrap: break-word;
+word-break: break-word;
+}
+
+.flex_div_prfle .flex_icon_ {
+gap: 1.3em;
+}
+
+
+.flex_div_prfle {
+line-height: 2.4em;
+}
+
+
+.Product_navbar .flex_nav_ProfileSection img {
+width: 24px;
+cursor: pointer;
+}
+
+.navProduct_Slider .navSlider_flex {
+display: flex;
+gap: 0.7em;
+margin-top: 1.3em;
+}
+
+.Product_navbar .logo_img {
+width: 107px;
+height: auto;
+}
+
+/* NavBar SLider */
+
+.navProduct_Slider .contact-us {
+margin-top: 1.2em;
+}
+
+.navProduct_Slider .sign_out {
+margin-top: 1.2em;
+}
+
+}
+
+
+@media (max-width: 768px) {
+
+.flex_div_prfle {
+line-height: 2.9em;
+}
+
+.Product_navbar {
+display: flex;
+justify-content: space-between;
+padding-left: 0;
+}
+
+
+.flex_nav_ProfileSection .nav_profileSection li {
+display: none;
+}
+
+.flex_nav_ProfileSection .navProfile_ {
+display: none;
+}
+
+.flex_nav_ProfileSection .nav_profileSection {
+gap: 0.6em;
+}
+
+.fa-shopping-cart {
+margin-right: 0.7em;
+margin-left: 0.1em;    
+}
+
+
+.fa_barsLogo_Container {
+display: flex;
+align-items: center;
+margin-left: 1.3em;
+}
+
+.fa_bars_nav {
+display: block;
+font-size: 1.5rem;
+color: #000000;
+}
+
+.Product_navbar .logo_img {
+width: 113px;
+}
+
+.search_products {
+display: none;
+}
+
+.afterSearch_prodct {
+display: block;
+position: absolute;
+padding: 12px;
+padding-left: 27px;
+width: 100%;
+left: 0;
+border-radius: 0px;
+border-left: none;
+border-right: none;
+border: 1px solid #dcdcdc;
+}
+
+}
+
+
+@media (min-width: 769px) and (max-width: 932px) {
+
+.navProduct_Slider {
+overflow-y: auto;
+}
+
+.flex_nav_ProfileSection .fa-search {
+position: absolute;
+margin-top: -0.1em;
+right: 1.6em;
+}
+
+
+.search_products {
+display: none;
+}
+
+.afterSearch_prodct {
+display: block;
+position: absolute;
+padding: 11px;
+padding-left: 17px;
+width: 100%;
+left: 0;
+border-radius: 0px;
+border-left: none;
+border-right: none;
+border: 1px solid #DCDCDC;
+}
+
+.flex_nav_ProfileSection .fa-search {
+margin: 0.1em 0.1em 0em 0em;
+}
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1516px) {
+
+.flex_div_prfle {
+line-height: 2.9em;
+}
+
+.Product_navbar {
+display: flex;
+justify-content: space-between;
+}
+
+.Product_navbar .nav_ul {
+display: none;
+}
+
+.Product_navbar .logo_img {
+width: 141px;
+height: auto;
+}
+
+.flex_nav_ProfileSection {
+display: flex;
+align-items: center;
+}
+
+.flex_nav_ProfileSection .nav_profileSection {
+display: flex;
+align-items: center;
+}
+
+.navProduct_Slider .contact-us {
+margin-top: 1.2em;
+}
+
+.navProduct_Slider .sign_out {
+margin-top: 1.2em;
+}
+
+}

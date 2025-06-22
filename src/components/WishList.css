@@ -1,0 +1,292 @@
+/* Done */
+
+.wishlist {
+max-width: 1127px;
+width: 100%;
+margin: auto;
+margin-top: 4.7em;
+font-size: 0.9rem;
+}
+
+
+.wishlist h2,
+li {
+color: rgb(0, 0, 0);
+}
+
+
+.flx_Wish_list ul {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+align-items: center;
+flex-wrap: wrap;
+width: 100%;
+height: 43px;
+background-color: rgb(248, 230, 240);
+border-top: 1px solid rgb(255, 20, 147);
+}
+
+.wishlist_details {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+align-items: center;
+flex-wrap: wrap;
+width: 100%;
+margin-top: .7em;
+border-bottom: 0.5px solid rgb(237, 231, 231);
+}
+
+
+.div_flex_whishlist .EmptyCartImg {
+width: 100%;
+max-width: 173px;
+margin-bottom: .7em;
+margin: 1.3em 0em -.5em 0em;
+}
+
+
+.wishlist img {
+width: 100%;
+max-width: 113px;
+margin: 0.5em 0em -0.1em 0em;
+}
+
+
+.wishlist .whistlist_h2 {
+font-size: 1.3rem;
+margin: 2.3em 0em 1.3em 0em;
+color: rgb(128, 128, 128);
+}
+
+
+.wishlist .inStock {
+color: rgba(24, 186, 24, 0.838);
+}
+
+
+/* This is 
+for Empty Cart */
+
+
+.div_flex_whishlist {
+margin-top: 2.7em;
+}
+
+
+.div_flex_whishlist h1 {
+font-size: 1.3rem;
+}
+
+
+.div_flex_whishlist p {
+margin-top: 1.9em;
+line-height: 2.3em;
+font-size: 0.9rem;
+}
+
+
+/* This is for 
+Text Hover */
+
+
+.Product-name {
+line-height: 1.9em;
+transition: 0.5s;
+}
+
+
+
+@media (max-width: 321px) {
+
+.wishlist {
+display: grid;
+grid-template-columns: 1fr;
+margin-bottom: 13.7em;
+width: 90%;
+}
+
+.wishlist img {
+width: 93px;
+padding: 2px;
+border-radius: 9px;
+margin-bottom: -0.7em;
+}
+
+.div_flex_whishlist .EmptyCartImg {
+width: 100%;
+max-width: 157px;
+}
+
+
+.li_trash_hrt {
+margin-top: 0.5em;
+}
+
+.flx_Wish_list ul {
+display: none;
+}
+
+.wishlist_details {
+display: grid;
+grid-template-columns: 1fr;
+text-align: start;
+line-height: 2.3em;
+margin-bottom: 1.3em;
+padding: 11px;
+border-radius: 4px;
+}
+
+
+/* This is 
+for Text Hover */
+
+
+.Product-name {
+line-height: 1.7em;
+}
+
+.wishlist .whistlist_h2 {
+font-size: 1.2rem;
+margin-left: 0.4em;
+text-align: start;
+}
+
+}
+
+
+
+@media (min-width: 321px) and (max-width: 768px) {
+
+
+.wishlist h2 {
+font-size: 1.1rem;
+margin-left: 0.3em;
+text-align: start;
+}
+
+.wishlist {
+display: grid;
+grid-template-columns: 1fr;
+text-align: center;
+width: 90%;
+}
+
+.wishlist img {
+width: 83px;
+padding: 2px;
+margin-bottom: -0.7em;
+border-radius: 9px;
+}
+
+.div_flex_whishlist .EmptyCartImg {
+width: 100%;
+max-width: 157px;
+}
+
+
+.li_trash_hrt {
+margin-top: 0.7em;
+}
+
+.flx_Wish_list ul {
+display: none;
+}
+
+.wishlist_details {
+display: grid;
+grid-template-columns: 1fr;
+padding: 13px;
+border-radius: 13px;
+line-height: 2.3em;
+margin-bottom: 1.3em;
+text-align: start;
+}
+
+.div_flex_whishlist {
+line-height: 2.5em;
+}
+
+.div_flex_whishlist p {
+line-height: 2.2em;
+}
+
+.wishlist .whistlist_h2 {
+font-size: 1.3rem;
+margin-top: .5em;
+margin-left: 0.3em;
+margin-bottom: .4em;
+text-align: center;
+}
+
+.div_flex_whishlist h1 {
+font-size: 1.2rem;
+margin-top: -1.4em;
+}
+
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1036px) {
+
+
+.wishlist {
+width: 95%;
+}
+
+.wishlist li {
+font-size: 0.9rem;
+}
+
+.flx_Wish_list ul {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+height: 44px;
+}
+
+.wishlist_details {
+padding: 7px;
+}
+
+
+/* This is for 
+Text Hover */
+
+.Product-name {
+line-height: 1.7em;
+}
+
+.wishlist .whistlist_h2 {
+font-size: 1.2rem;
+margin-left: 0.3em;
+text-align: start;
+}
+
+}
+
+@media (min-width: 1036px) and (max-width: 1519px) {
+
+.wishlist {
+width: 95%;
+}
+
+.wishlist .whistlist_h2 {
+font-size: 1.2rem;
+text-align: start;
+margin-left: 0.5em;
+}
+
+.flx_Wish_list ul {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+}
+
+.flx_Wish_list ul {
+height: 51px;
+}
+
+.Product-name {
+line-height: 1.9em;
+}
+
+}

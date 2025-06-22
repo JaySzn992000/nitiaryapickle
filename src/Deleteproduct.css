@@ -1,0 +1,179 @@
+/* Done */
+
+.Delete-relative {
+width: 92%;
+margin: auto;
+margin-bottom: 5.7em;
+transition: all 0.3s ease;
+}
+
+
+.Delete_relativeConinside {
+width: 95%;
+}
+
+
+.Delete_form {
+text-align: start;
+line-height: 2.7em;
+padding: 23px;
+border-radius: 7px;
+margin-left: 17vw;
+margin-top: 2.7em;
+background-color: #FFFFFF;
+box-shadow: 0 4px 6px rgba(2, 0, 0, 0.195);
+transition: all 0.3s ease;
+}
+
+
+.Delete_form #Addtag {
+width: 157px;
+height: 81px;
+padding: 11px;
+line-height: 2.1em;
+font-size: 1.1rem;
+margin-bottom: .8em;
+border-radius: 7px;
+color: #000000;
+}
+
+
+.IconAddPrdctDlt {
+width: 53px;
+margin-bottom: -2.1em;
+}
+
+
+
+.Delete_formConinside {
+margin-left: 0;
+}
+
+.Delete_form h3 {
+font-weight: normal;
+margin-bottom: 0.1em;
+}
+
+
+.Delete_form button {
+color: #FFFFFF;
+width: 138px;
+padding: 13px;
+background-color: #4169E1;
+border: 1px solid #808080;
+margin-top: 1.7em;
+border-radius: 7px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+
+.Delete_form input {
+padding: 13px;
+height: 38px;
+outline: none;
+border-radius: 13px;
+border: 1px solid #DCDCDC;
+transition: all 0.3s ease;
+}
+
+
+
+@media (max-width: 768px) {
+
+.Delete-relative {
+width: 92%;
+}
+
+.Delete_form {
+width: 100%;
+margin-left: 0;
+}
+
+
+.Delete_form button {
+width: 100%;
+}
+
+
+}
+
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+#Addtag {
+font-size: 1rem;
+}
+
+.Delete-relative {
+width: 97%;
+}
+
+.Delete_relativeConinside {
+width: 92%;
+}
+
+.Delete_form {
+margin-left: 40vw;
+width: 57%;
+transition: all 0.3s ease-in-out;
+}
+
+.Delete_form.Delete_formConinside {
+margin-left: 0;
+width: 100%;
+}
+
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1245px) {
+
+.Delete-relative {
+width: 97%;
+}
+
+.Delete_relativeConinside {
+width: 95%;
+}
+
+.Delete_form {
+margin-left: 30vw;
+width: 68%;
+transition: all 0.3s ease-in-out;
+}
+
+.Delete_form.Delete_formConinside {
+margin-left: 0;
+width: 100%;
+}
+
+
+}
+
+
+@media (min-width: 1245px) and (max-width: 1519px) {
+
+.Delete-relative {
+width: 100%;
+}
+
+.Delete_relativeConinside {
+width: 96%;
+}
+
+.Delete_form {
+margin-left: 26vw;
+width: 71%;
+transition: all 0.3s ease-in-out;
+}
+
+.Delete_form.Delete_formConinside {
+margin-left: 0;
+width: 100%;
+}
+
+
+}

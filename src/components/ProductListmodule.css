@@ -1,0 +1,275 @@
+/* Done */
+
+/* ...  
+Best Selling Gifts .. */
+
+.header_Filter {
+width: 100%;
+}
+
+/* .. Total with , 
+Proudcts .. */
+
+.flex_productlist {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(227px, 0fr));
+max-width: 78%;
+transform: translateX(21.7vw);
+position: relative;
+margin-top: .3em;
+gap: 0.4em;
+}
+
+
+/* .. Images size of 
+the Products ...  */
+
+
+.flex_productlist .produclist_divContainer {
+position: relative;
+height: auto;
+margin-bottom: 2.1em;
+border-radius: 33px;
+border: 1px solid rgba(27, 6, 6, 0.055);
+box-shadow: 7px 12px 12px 5px rgba(19, 19, 19, 0.073);
+max-width: 231px;
+}
+
+
+.flex_productlist .produclist_divContainer img {
+width: 100%;
+border-radius: 17px;
+margin-bottom: -0.5em;
+padding: 7px;
+}
+
+
+/* ... Text Postition in 
+Down of Img ... */
+
+
+.flex_productlist .padding_contain {
+width: 100%;
+padding: 17px;
+margin: -.5em 0em 0.3em 0em;
+}
+
+
+.review_Cntnr {
+display: flex;
+align-items: center;
+gap: .3em;
+margin-top: -.4em;
+margin-left: -.6em;
+}
+
+
+.review_Cntnr .fa_Review{
+margin-top: .7em;
+margin-left: .3em;
+}
+
+
+.review_Cntnr .fa_Review {
+color: rgb(70, 69, 69);
+}
+
+
+.padding_contain #Review_Img {
+width: 39px;
+}
+
+
+.flex_productlist .padding_contain .sizeClr {
+color: rgb(128, 128, 128);
+margin-top: 0.4em;
+}
+
+
+/* ... This is for Text ALign 
+Start of Product Texts .. */
+
+
+.flex_inr {
+text-align: start;
+}
+
+
+.flex_inr li {
+font-size: 0.9rem;
+line-height: 2.5em;
+color: #333;
+}
+
+
+/* .. Price Div 
+Flex .. */
+
+
+.flex_inr .price_div {
+display: flex;
+align-items: center;
+gap: 0.3em;
+width: auto;
+max-width: 79px;
+height: 34px;
+height: auto;
+margin-top: .7em;
+padding-left: 13px;
+padding-right: 6px;
+flex-wrap: wrap;
+background-color: #ffec54;
+color: #000000;
+border-radius: 17px;
+}
+
+
+.fa-heart_products {
+position: absolute;
+right: 0px;
+z-index: 999;
+padding: 11px;
+font-size: 1.2rem;
+border-radius: 11px 11px 0 27px;
+background-color: rgb(255, 255, 255);
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.151);
+color: rgb(0, 0, 0);
+cursor: pointer;
+}
+
+
+.fa-heart_products {
+color: #DCDCDC;
+background-color: #FFFFFF;
+transition: background-color 0.3s ease;
+border: 0.3px solid rgb(239, 234, 234);
+}
+
+
+.fa-heart_products.wishlist-active {
+color: #ffec54 !important;
+background-color: rgb(255, 255, 255);
+}
+
+
+
+@media (max-width: 768px) {
+
+.padding_contain li {
+font-size: 0.8rem;
+}
+
+.padding_contain .fa_Price {
+font-size: 0.8rem;
+}
+
+.header_Filter {
+width: 100%;
+margin: 0em 0em 0em 0em;
+}
+
+.flex_inr li {
+line-height: 2.3em;
+}
+
+
+.flex_productlist {
+display: grid;
+max-width: 95%;
+transform: translateX(2.3vw);
+grid-template-columns: repeat(2, 1fr);
+}
+
+
+.flex_productlist .produclist_divContainer {
+box-shadow: none;
+max-width: 100%;
+}
+
+
+.flex_productlist .produclist_divContainer img {
+width: 85%;
+}
+
+
+/* ... products 
+Size ..  */
+
+/* ... Products gap 
+Between ... */
+
+.flex_productlist {
+gap: 0.3em;
+}
+
+
+/* .. Whislist ADD 
+heart Size .. */
+
+.fa-heart_products {
+padding: 11px;
+font-size: 0.9rem;
+}
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1036px) {
+
+.header_Filter {
+width: 98%;
+margin: 0em 0em 0em 0em;
+}
+
+
+.flex_productlist {
+display: grid;
+max-width: 95%;
+transform: translateX(2.3vw);
+grid-template-columns: repeat(2, 1fr);
+}
+
+
+.flex_productlist .produclist_divContainer {
+box-shadow: none;
+max-width: 100%;
+}
+
+}
+
+
+
+@media (min-width: 1037px) and (max-width: 1519px) {
+
+.header_Filter {
+width: 100%;
+margin: 0em 0em 0em 0em;
+}
+
+
+.flex_productlist {
+position: relative;
+display: grid;
+max-width: 68vw;
+margin-top: 4.3em;
+grid-template-columns: repeat(auto-fit, minmax(16vw, 0fr));
+transform: translateX(30.3vw);
+}
+
+
+.flex_productlist .produclist_divContainer {
+position: relative;
+height: auto;
+margin-bottom: 2.1em;
+border-radius: 33px;
+border: 1px solid rgba(27, 6, 6, 0.055);
+box-shadow: 7px 12px 12px 5px rgba(19, 19, 19, 0.073);
+}
+ 
+
+.header_Filter {
+width: 67%;
+margin: 0em 0em 0em 333px;
+}
+
+}

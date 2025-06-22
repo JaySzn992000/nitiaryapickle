@@ -1,0 +1,167 @@
+/* Done  */
+
+.about_flex_ {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: start;
+gap: 5.7vw;
+margin-top: 6.3em;
+margin-bottom: 6.1em;
+line-height: 2.7em;
+}
+
+.about_flex_ section {
+width: 617px;
+}
+
+.about_flex_ img {
+width: 497px;
+height: auto;
+max-width: 100%; 
+}
+
+.about_flex_ h1 {
+font-size: 2.3rem;
+color: #10204f;
+}
+
+.about_flex_ h2 {
+font-size: 1.3rem;
+margin-top: 0.7em;
+color: rgb(40, 38, 38);
+}
+
+
+.about_flex_ p {
+margin-top: 0.7em;
+line-height: 2.3em;
+text-align: justify;
+color: rgb(116, 115, 115);
+}
+
+.about_flex_tw p {
+width: 85%;
+margin: auto;
+line-height: 2.3em;
+text-align: center;
+color: rgb(116, 115, 115);
+}
+
+
+.about_flex_tw .about_para {
+text-align: justify;
+}
+
+.about_flex_tw h2,
+h3 {
+margin-top: 2.3em;
+margin-bottom: 1.5em;
+color: #10204f;
+}
+
+
+.about_flex_tw h3 {
+padding: 11px;
+line-height: 1.3em;
+margin-bottom: 1em;
+margin-top: 1.7em;
+color: rgba(26, 10, 10, 0.812);
+}
+
+
+
+@media (max-width: 1024px) {
+
+.about_flex_ {
+flex-direction: column;
+margin-top: 3.7em;
+margin-bottom: 3.3em;
+}
+
+.about_flex_ section {
+width: 85%;
+}
+
+.about_flex_tw p {
+width: 85%;
+}
+
+.about_flex_tw h3 {
+margin-top: .7em;
+line-height: 2.1em;
+margin-bottom: -.1em;
+}
+
+
+.about_flex_tw h2 {
+margin-bottom: .7em;
+}
+
+
+.about_flex_ h1,
+h2 {
+text-align: center;
+}
+
+.about_flex_ h1 {
+font-size: 2.3rem;
+margin-top: 1.1em;
+margin-bottom: .5em;
+}
+
+.about_flex_ h2 {
+font-size: 1.2rem;
+text-align: center;
+}
+
+.about_flex_ img {
+width: 100vw;
+margin-left: 0;
+}
+
+.about_flex_ section p {
+margin-top: 1.2em;
+}
+
+.header-ad {
+margin-top: 8.7em;
+}
+
+}
+
+/*  */
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+
+.about_flex_ {
+gap: 4.3vw;
+}
+
+.about_flex_ img {
+width: 40vw;
+}
+
+.about_flex_ section {
+width: 45vw;
+}
+
+.about_flex_ h1 {
+font-size: 2.5rem;
+}
+
+.about_flex_ h2 {
+font-size: 1.3rem;
+text-align: start;
+}
+
+.about_flex_tw h3 {
+margin-top: .5em;
+margin-bottom: .3em;
+}
+
+.about_flex_ p {
+font-size: 1rem;
+}
+
+}

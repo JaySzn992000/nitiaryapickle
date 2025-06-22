@@ -1,0 +1,140 @@
+/* Done  */
+
+.privacy_flex_ {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 6.8em;
+margin-bottom: 5.3em;
+line-height: 2.7em;
+}
+
+.privacy_flex_ div {
+width: 65%;
+}
+
+
+.privacy_flex_ div h1 {
+font-size: 1.3rem;
+margin-bottom: -0.2em;
+color: #10204f;
+}
+
+.privacy_flex_ h2 {
+font-size: 1.1rem;
+margin-top: 0.7em;
+}
+
+.privacy_flex_ p {
+margin-top: 0.7em;
+line-height: 2.3em;
+color: #808080;
+}
+
+.privacy_flex_tw li {
+color: #808080;
+margin-top: 1.7em;
+}
+
+.privacy_flex_tw p {
+line-height: 2.3em;
+width: 65%;
+margin: auto;
+color: #808080;
+}
+
+.privacy_flex_tw h2,
+h3 {
+margin-top: 2.3em;
+font-size: 1.1rem;
+color: #10204f;
+}
+
+
+.privacy_flex_tw h4 {
+color: rgba(26, 10, 10, 0.812);
+margin-top: 2.9em;
+margin-bottom: 1.7em;
+}
+
+.privacy_flex_tw h2 {
+margin-top: 1.7em;
+}
+
+
+@media (max-width: 1500px) {
+
+.privacy_flex_ {
+flex-direction: column;
+margin-top: 3.7em;
+margin-bottom: 3.3em;
+text-align: justify;
+}
+
+.privacy_flex_ div {
+width: 85%;
+}
+
+.privacy_flex_tw p {
+width: 85%;
+text-align: justify;
+}
+
+.privacy_flex_tw h4 {
+margin-top: 1.3em;
+margin-bottom: 1.3em;
+}
+
+.privacy_flex_tw section {
+margin-top: 1.7em;
+margin-bottom: 2.7em;
+width: 85%;
+margin: auto;
+}
+
+.privacy_flex_tw {
+margin-bottom: 8.7em;
+}
+
+.privacy_flex_tw div {
+margin-top: 2.3em;
+}
+
+.privacy_flex_tw section .section_div li {
+line-height: 2.3em;
+font-size: .9rem;
+}
+
+.section_dvifrst li{
+font-size: .9rem;
+line-height: 1.7em;
+}
+
+.privacy_flex_ h1,
+h2 {
+text-align: center;
+}
+
+.privacy_flex_ div h1 {
+font-size: 1.3rem;
+margin-top: 1.1em;
+}
+
+.privacy_flex_ h2 {
+font-size: 1rem;
+text-align: center;
+}
+
+.privacy_flex_ div p {
+margin-top: 1.2em;
+text-align: justify;
+}
+
+.privacy_flex_ li {
+color: #808080;
+margin-top: 1.7em;
+}
+
+
+}
+

@@ -1,0 +1,53 @@
+.usertd {
+overflow: hidden;
+width: 357px;
+max-width: 357px;
+}
+
+.Userpass {
+width: 117px;
+max-width: 117px;
+margin-top: .5em;
+margin-bottom: .7em;
+}
+
+
+.username {
+width: 207px;
+max-width: 207px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+.usertd {
+width: 100%;
+max-width: 100%;
+font-size: 0.9rem;
+}
+
+.username {
+width: 100%;
+max-width: 100%;
+font-size: 0.9rem;
+}
+
+
+.product-table td {
+display: block;
+width: 100%;
+box-sizing: border-box;
+}
+
+.product-table tr {
+display: block;
+margin-bottom: 1rem;
+border-bottom: 1px solid #ccc;
+}
+
+.product-table thead {
+display: none;
+}
+
+}

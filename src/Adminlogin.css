@@ -1,0 +1,131 @@
+/* Done */
+
+.admin-login-container {
+display: flex;
+justify-content: center;
+height: 100vh;
+align-items: center;
+background-color: #ffffff;
+}
+
+
+.admin-login-form {
+width: 100%;
+max-width: 321px;
+height: 527px;
+padding: 17px;
+border-radius: 7px;
+background: #ffffff;
+text-align: center;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease-in-out;
+}
+
+
+.admin-login-container h3 {
+margin-top: 1.2em;
+}
+
+
+.admin-login-form h4 {
+margin-top: 21px;
+margin-bottom: 14px;
+text-align: start;
+color: #333;
+}
+
+
+.admin-login-form section {
+margin-top: 2.5em;
+line-height: .9em;
+}
+
+
+.admin-login-form section h4 {
+font-size: .9rem;
+text-align: center;
+cursor: pointer;
+}
+
+
+.admin-login-form p {
+font-size: 0.8rem;
+margin-top: -0.5em;
+line-height: 1.7em;
+color: #808080;
+}
+
+
+.form-group {
+margin-bottom: 17px;
+margin-top: 1.5em;
+}
+
+
+.form-input {
+width: 100%;
+padding: 9px 15px;
+padding-left: 17px;
+font-size: 0.9rem;
+color: #808080;
+border: 1px solid #ddd;
+border-radius: 5px;
+outline: none;
+transition: all 0.3s ease;
+}
+
+
+.login-button {
+margin-top: 0.9em;
+margin-bottom: 1.2em;
+background: linear-gradient(135deg, #4c84ff, #6ae7f5);
+color: #fff;
+padding: 14px;
+border: none;
+border-radius: 7px;
+font-size: 0.9rem;
+cursor: pointer;
+transition: background 0.3s ease;
+width: 40%;
+}
+
+.login-button:hover {
+background: linear-gradient(135deg, #6ae7f5, #4c84ff);
+box-shadow: 0 4px 15px rgba(76, 132, 255, 0.3);
+}
+
+
+
+
+@media (max-width: 480px) {
+
+
+.admin-login-form {
+width: 85%;
+height: auto;
+line-height: .2em;
+padding: 15px;
+padding-top: 37px;
+margin-top: -2.3em;
+margin-right: -.5vw;
+}
+
+.admin-login-form h2 {
+font-size: 1.5rem;
+}
+
+.form-input,
+.login-button {
+font-size: 0.8rem;
+}
+
+.form-group .form-input{
+padding: 7px;
+padding-left: 15px;
+}
+
+.form-group h4 {
+font-size: .9rem;
+}
+
+}

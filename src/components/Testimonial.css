@@ -1,0 +1,84 @@
+
+.items {
+width: 92%;
+margin-top: 5.7em;
+margin-left: 50%;
+transform: translateX(-50%);
+
+}
+
+
+.card {
+display: flex;
+flex-direction: column;
+width: 90%;
+margin: 10px;
+padding: .7rem;
+border-radius: 11px;
+cursor: pointer;
+}
+
+
+.card-title img {
+width: 25px;
+margin-bottom: 1.3em;
+line-height: .2 !important;
+}
+
+
+.profile {
+margin-top: 16px;
+margin-left: 11px;
+}
+
+
+.profile-pic {
+width: 51px;
+height: 55px;
+border-radius: 50%;
+}
+
+
+.cust-name {
+font-size: 18px;
+margin-top: 1.1em;
+}
+
+
+.cust-profession {
+font-size: 10px;
+}
+
+
+.col-sm-2{
+width: 100%;
+margin-top: 1.3em;
+margin-left: 41%;
+}
+
+
+.items p {
+font-size: 0.875rem;
+line-height: 1.5rem;
+margin-left: -1.6em;
+margin-top: .5em;
+}
+
+
+
+@media (max-width : 769px ) {
+
+.items {
+width: 85%;
+margin-top: 4.3em;
+}
+
+.items p {
+font-size: 0.8rem;
+line-height: 1.5rem;
+margin-left: -1.6em;
+margin-top: .5em;
+}
+
+
+}

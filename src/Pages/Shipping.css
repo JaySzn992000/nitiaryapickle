@@ -1,0 +1,60 @@
+/* Shipping.css */
+
+.ImgShip {
+width: 55%;
+margin-bottom: 3.7em;
+}
+
+.shipp_cs {
+margin-top: 5.3em;
+}
+
+
+.shipp_cs h1 {
+font-size: 1.1rem;
+margin-top: 2.1em;
+padding-bottom: 17px;
+color: #10204f;
+}
+
+.shipp_cs p {
+margin-bottom: 15px;
+width: 63%;
+margin: auto;
+line-height: 2.3em;
+margin-top: 0.7em;
+color: #808080;
+}
+
+.shipp_cs li {
+font-size: 15px;
+margin-left: 20px;
+margin-bottom: 8px;
+width: 87%;
+margin: auto;
+line-height: 2.3em;
+list-style-type: none;
+color: #808080;
+}
+
+
+
+@media (max-width: 600px) {
+
+
+.ImgShip {
+width: 100%;
+margin-bottom: 3.7em;
+}
+
+.shipp_cs p {
+width: 85%;
+font-size: .9rem;
+}
+
+
+.shipp_cs li {
+font-size: .9rem;
+}
+
+}

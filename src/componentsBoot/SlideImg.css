@@ -1,0 +1,20 @@
+.img_flex {
+margin-top: 5.7em;
+line-height: 0.9em;
+}
+
+.img_flex div {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 4.7em;
+}
+
+.img_flex div img {
+width: 175px;
+}
+
+
+.img_flex h1 {
+margin-bottom: 1.3em;
+}

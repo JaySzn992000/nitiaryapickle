@@ -1,0 +1,138 @@
+/* Done */
+
+.flex_Container_Filter {
+display: flex;
+justify-content: center;
+margin-left: 317px;
+margin-top: 9.3em;
+padding: 87px 0 207px;
+background-color: #202434;
+}
+
+.header_dv {
+margin: 0.7em 4.7em 0em 0em;
+}
+
+.headerFilter .header_dvLogo {
+width: 167px;
+margin-top: .9em;
+cursor: pointer;
+}
+
+.headerFilter .div_header_Filter {
+display: flex;
+justify-content: center;
+text-align: start;
+gap: 5.3em;
+}
+
+.headerFilter ul {
+line-height: 3.4em;
+margin: 0;
+}
+
+.headerFilter ul h3 {
+color: #FFFFFF;
+margin-bottom: .7em;
+}
+
+.headerFilter ul li {
+color: #808080;
+transition: 0.5s;
+font-size: 0.9rem;
+cursor: pointer;
+}
+
+
+.headerFilter ul li:hover {
+color: #f8a424;
+}
+
+
+@media (max-width: 1036px) {
+
+.flex_Container_Filter {
+flex-direction: column;
+padding: 127px 47px 207px 47px;
+margin-left: 0;
+
+}
+
+.headerFilter .div_header_Filter {
+flex-direction: column;
+gap: 1.3em;
+}
+
+/* .. THis is for Logo in Stating ... .  */
+
+.header_dv {
+text-align: start;
+}
+
+.headerFilter .header_dvLogo {
+width: 137px;
+margin-top: -.9em;
+margin-left: -.7em;
+}
+
+.headerFilter ul li {
+font-size: 0.8rem;
+}
+
+.headerFilter ul h3 {
+font-size: 1rem;
+}
+
+}
+
+
+@media (min-width: 1037px) and (max-width: 1151px) {
+
+.headerFilter .div_header_Filter {
+gap: .7em;
+margin-left: -.7em;
+}
+
+}
+
+
+
+@media (min-width: 1151px) and (max-width: 1519px) {
+
+.headerFilter .div_header_Filter {
+gap: 2.7em;
+}
+
+}
+
+
+
+@media (min-width: 1037px) and (max-width: 1519px) {
+
+.flex_Container_Filter {
+margin-left: 297px;
+padding: 67px 37px 207px 57px;
+}
+
+
+.headerFilter .header_dvLogo {
+width: 133px;
+margin-top: 1.3em;
+margin-right: -2.3em;
+margin-left: -1.7em;
+}
+
+.headerFilter ul li {
+font-size: 0.8rem;
+width: 117px;
+}
+
+.headerFilter ul h3 {
+font-size: 1rem;
+}
+
+.headerFilter ul {
+line-height: 3.3em;
+margin: 0;
+}
+}

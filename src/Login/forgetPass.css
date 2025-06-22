@@ -1,0 +1,51 @@
+
+.message_forget p {
+color: red;
+width: 25%;
+margin: auto;
+line-height: 2.3em;
+margin-top: 2.1em;
+}
+
+#logged_form h2 {
+font-size: 1.3rem;
+}
+
+#very_btn {
+margin-bottom: 1.7em;
+}
+
+.password-field{
+margin-bottom: 1.3em;
+}
+
+
+#logged_form h4 {
+margin-bottom: .4em;
+}
+
+
+
+@media (max-width : 1500px) {
+
+.message_forget p {
+margin-top: 1.9em;
+width: 80%;
+line-height: 2.3em;
+color: red;
+}
+
+#logged_form h2 {
+font-size: 1.1rem;
+}
+
+#logged_form input {
+width: 95%;
+}
+
+#very_btn {
+margin-top: 2.1em !important;
+}
+
+
+}
