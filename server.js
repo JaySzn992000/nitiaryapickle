@@ -7,10 +7,18 @@ const path = require("path");
 const Razorpay = require("razorpay");
 const fs = require("fs");
 
+
+
 const app = express();
+
+
+require("dotenv").config();
+const pool = require("./config"); 
+
 app.use(cors());
 app.use(bodyParser.json());
 const PORT = 3001;
+
 
 const db = mysql.createConnection({
 host: "localhost",
@@ -18,6 +26,18 @@ database: "ecomweb1",
 user: "root",
 password: "jay992000",
 });
+
+
+app.get("/api/test", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT NOW()");
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error("❌ DB Error:", err.message);
+    res.status(500).send("Database error");
+  }
+});
+
 
 app.post("/postqty", (req, res) => {
 const insertRegster = "INSERT INTO ecart VALUES  (?,?,?)";
