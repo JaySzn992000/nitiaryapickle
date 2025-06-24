@@ -29,12 +29,6 @@ password: "jay992000",
 
 
 
-// ✅ DB connection
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false },
-});
-
 
 app.get("/", async (req, res) => {
   res.send("✅ Backend is Live & Working");
