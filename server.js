@@ -33,14 +33,15 @@ app.get("/", async (req, res) => {
 });
 
 
-app.get("/", async (req, res) => {
+app.get("/users", async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM public._registeration"); // table name check kar
+    const result = await pool.query("SELECT * FROM public.registration"); // 👈 apna exact table name daal
     res.json(result.rows);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 app.get("/api/test", async (req, res) => {
