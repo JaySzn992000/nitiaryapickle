@@ -37,7 +37,7 @@ app.get("/", async (req, res) => {
 
 app.get("/registeration", async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM public.registeration"); // 👈 yahi tera table hai
+    const result = await pool.query("SELECT * FROM public._registeration");
     res.json(result.rows);
   } catch (err) {
     res.status(500).json({ error: err.message });
