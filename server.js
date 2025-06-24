@@ -28,6 +28,21 @@ password: "jay992000",
 });
 
 
+app.get("/", async (req, res) => {
+  res.send("✅ Backend is Live & Working");
+});
+
+
+app.get("/", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT * FROM public._registeration"); // table name check kar
+    res.json(result.rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
 app.get("/api/test", async (req, res) => {
   try {
     const result = await pool.query("SELECT NOW()");
