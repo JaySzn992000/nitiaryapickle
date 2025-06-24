@@ -33,9 +33,9 @@ app.get("/", async (req, res) => {
 });
 
 
-app.get("/users", async (req, res) => {
+app.get("/registration", async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM public.registration"); // 👈 apna exact table name daal
+    const result = await pool.query("SELECT * FROM public.registration"); // 👈 yahi tera table hai
     res.json(result.rows);
   } catch (err) {
     res.status(500).json({ error: err.message });
