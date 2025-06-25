@@ -19,7 +19,7 @@ const customerFetch = async () => {
 try {
     // http://192.168.1.4:3000
     // http://localhost:3001/fetchCutomerOrder
-const response = await fetch("http://192.168.144.129:3001/fetchCutomerOrder");
+const response = await fetch("https://picklewebsite.onrender.com/fetchCutomerOrder");
 const data = await response.json();
 setAllCustomerOrders(data.products);
 setcustomerOrder(data.products);
@@ -60,7 +60,7 @@ const customerFetch = async () => {
 
 try {
 
-const response = await fetch("http://192.168.1.4:3001/fetchCutomerOrder");
+const response = await fetch("https://picklewebsite.onrender.com/fetchCutomerOrder");
 const data = await response.json();
 setcustomerOrder(data.products);
 settotalcustProducts(data.total);
@@ -114,7 +114,7 @@ return `${month}-${day}-${year}`;
 const updateStatus = async (orderId) => {
 
 try {
-const response = await fetch("http://localhost:3001/updateOrderStatus", {
+const response = await fetch("https://picklewebsite.onrender.com/updateOrderStatus", {
 method: "POST",
 headers: {
 "Content-Type": "application/json",
@@ -232,7 +232,7 @@ return (
 <td colSpan="1">
 {CusDB.file_path && (
 <img
-src={`http://localhost:3001${CusDB.file_path}`}
+src={`https://picklewebsite.onrender.com${CusDB.file_path}`}
 alt={CusDB.name}
 className="custorders-image"
 style={{

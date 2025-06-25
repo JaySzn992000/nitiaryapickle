@@ -20,7 +20,7 @@ const query = new URLSearchParams(location.search).get("search"); // Extract
 
 useEffect(() => {
 axios
-.get("http://localhost:3001/fetchProductslistHoodies")
+.get("https://picklewebsite.onrender.com/fetchProductslistHoodies")
 .then((response) => {
 console.log("Fetched Mixed Pickles products:", response.data); 
 setAllProducts(response.data); 
@@ -37,7 +37,7 @@ console.error("Error fetching Mixed Pickles products:", error);
 useEffect(() => {
 if (query) {
 axios
-.get("http://localhost:3001/fetchProductslist", {
+.get("https://picklewebsite.onrender.com/fetchProductslist", {
 params: { search: query },
 })
 .then((response) => {
@@ -151,7 +151,7 @@ wishlistStatus[product.id] ? "wishlist-active" : ""
 
 <Link to={`/product/${product.id}`}>
 <img
-src={`http://localhost:3001${product.file_path}`}
+src={`https://picklewebsite.onrender.com${product.file_path}`}
 alt={product.name}
 />
 </Link>

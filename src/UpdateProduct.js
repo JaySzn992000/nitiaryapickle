@@ -27,7 +27,7 @@ formData.append("image", productImage);
 }
 
 try {
-const response = await fetch("http://localhost:3001/api/update-product", {
+const response = await fetch("https://picklewebsite.onrender.com/api/update-product", {
 method: "POST",
 body: formData,
 });

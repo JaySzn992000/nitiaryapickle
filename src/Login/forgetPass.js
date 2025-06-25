@@ -47,7 +47,7 @@ return;
 
 
 try {
-const response = await fetch("http://localhost:3001/verifyemail", {
+const response = await fetch("https://picklewebsite.onrender.com/verifyemail", {
 method: "POST",
 headers: {
 "Content-Type": "application/json",
@@ -115,7 +115,7 @@ return;
 
 
 try {
-const response = await fetch("http://localhost:3001/resetpassword", {
+const response = await fetch("https://picklewebsite.onrender.com/resetpassword", {
 method: "POST",
 headers: {
 "Content-Type": "application/json",

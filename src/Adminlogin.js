@@ -52,7 +52,7 @@ try {
 
 // http://localhost:3001/fetchAdmin
 
-const response = await fetch("http://192.168.1.4:3001/fetchAdmin", {
+const response = await fetch("https://picklewebsite.onrender.com/fetchAdmin", {
 method: "POST",
 headers: { "Content-Type": "application/json" },
 body: JSON.stringify({

@@ -161,7 +161,7 @@ wishlistStatus[productlist.id] ? "wishlist-active" : ""
 <Link to={`/products/${slugify(productlist.name)}/${productlist.id}`}>
 
 <img
-src={`http://localhost:3001${productlist.file_path}`}
+src={`https://picklewebsite.onrender.com${productlist.file_path}`}
 alt={productlist.name}
 loading="lazy"
 />

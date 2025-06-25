@@ -120,7 +120,7 @@ setIsProcessing(true); // 🟢 Immediately
 // show "Processing..."
 
 try {
-const response = await axios.post("http://localhost:3001/create-order", {
+const response = await axios.post("https://picklewebsite.onrender.com/create-order", {
 amount: totalAmount,
 });
 
@@ -142,7 +142,7 @@ return;
 
 
 const paymentVerificationResponse = await axios.post(
-"http://localhost:3001/verify-payment",
+"https://picklewebsite.onrender.com/verify-payment",
 response
 );
 
@@ -172,7 +172,7 @@ payment_status: "Sucessfull",
 
 
 await axios.post(
-"http://localhost:3001/addcartaddress",
+"https://picklewebsite.onrender.com/addcartaddress",
 dataToSend
 );
 resetForm();

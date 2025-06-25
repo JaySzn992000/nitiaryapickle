@@ -11,7 +11,7 @@ useEffect(() => {
 const fetchData = async () => {
 
 try {
-const response = await fetch("http://192.168.1.4:3001/fetchCutomerOrder");
+const response = await fetch("https://picklewebsite.onrender.com/fetchCutomerOrder");
 const data = await response.json();
 
 if (!data.products || !Array.isArray(data.products)) {
