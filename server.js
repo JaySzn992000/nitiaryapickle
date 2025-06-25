@@ -11,7 +11,6 @@ const fs = require("fs");
 
 const app = express();
 
-
 require("dotenv").config();
 const pool = require("./config"); 
 
@@ -173,6 +172,7 @@ res.status(200).json(result);
 }
 });
 });
+
 
 // ProductList
 
@@ -371,56 +371,99 @@ res.json(results);
 });
 });
 
+
+
+
 // from here
 
-app.get("/fetchProductslist", (req, res) => {
-const searchQuery = req.query.search || "";
+// app.get("/fetchProductslist", (req, res) => {
+// const searchQuery = req.query.search || "";
 
-const keywords = searchQuery.toLowerCase().split(/\s+/);
-const conditions = keywords
-.map((keyword) => `LOWER(name) LIKE ?`)
-.join(" AND ");
-const advancedSearchQuery = `
-SELECT *
-FROM imgproduct
-WHERE ${conditions}
-`;
-const advancedSearchValues = keywords.map((keyword) => `%${keyword}%`);
+// const keywords = searchQuery.toLowerCase().split(/\s+/);
+// const conditions = keywords
+// .map((keyword) => `LOWER(name) LIKE ?`)
+// .join(" AND ");
+// const advancedSearchQuery = `
+// SELECT *
+// FROM imgproduct
+// WHERE ${conditions}
+// `;
+// const advancedSearchValues = keywords.map((keyword) => `%${keyword}%`);
 
-db.query(
-advancedSearchQuery,
-advancedSearchValues,
-(err, advancedResults) => {
-if (err) {
-console.error("Error fetching data:", err.stack);
-return res.status(500).json({ error: "Database query failed" });
-}
+// db.query(
+// advancedSearchQuery,
+// advancedSearchValues,
+// (err, advancedResults) => {
+// if (err) {
+// console.error("Error fetching data:", err.stack);
+// return res.status(500).json({ error: "Database query failed" });
+// }
 
-if (advancedResults.length > 0) {
-return res.json(advancedResults);
-}
+// if (advancedResults.length > 0) {
+// return res.json(advancedResults);
+// }
 
-// If no advanced results,
-// check exact match
+// // If no advanced results,
+// // check exact match
 
-const exactMatchQuery = `
-SELECT *
-FROM imgproduct
-WHERE LOWER(img) = LOWER(?)
-`;
-const values = [searchQuery];
+// const exactMatchQuery = `
+// SELECT *
+// FROM imgproduct
+// WHERE LOWER(img) = LOWER(?)
+// `;
+// const values = [searchQuery];
 
-db.query(exactMatchQuery, values, (err, exactResults) => {
-if (err) {
-console.error("Error fetching data:", err.stack);
-return res.status(500).json({ error: "Database query failed" });
-}
+// db.query(exactMatchQuery, values, (err, exactResults) => {
+// if (err) {
+// console.error("Error fetching data:", err.stack);
+// return res.status(500).json({ error: "Database query failed" });
+// }
 
-res.json(exactResults);
+// res.json(exactResults);
+// });
+// }
+// );
+// });
+
+
+
+// fetchProductslist PostGreSQL 
+
+app.get("/fetchProductslist", async (req, res) => {
+  const searchQuery = req.query.search || "";
+  const keywords = searchQuery.toLowerCase().split(/\s+/);
+
+  try {
+    // Advanced Search (using ILIKE for case-insensitive matching in PostgreSQL)
+    const conditions = keywords.map((_, index) => `LOWER(name) ILIKE $${index + 1}`).join(" AND ");
+    const values = keywords.map((keyword) => `%${keyword}%`);
+
+    const advancedSearchQuery = `
+      SELECT * FROM imgproduct
+      WHERE ${conditions}
+    `;
+
+    const advancedResult = await pool.query(advancedSearchQuery, values);
+
+    if (advancedResult.rows.length > 0) {
+      return res.json(advancedResult.rows);
+    }
+
+    // If no advanced results, try exact match on 'img' column
+    const exactMatchQuery = `
+      SELECT * FROM imgproduct
+      WHERE LOWER(img) = LOWER($1)
+    `;
+    const exactResult = await pool.query(exactMatchQuery, [searchQuery]);
+
+    res.json(exactResult.rows);
+  } catch (err) {
+    console.error("Error fetching data:", err.stack);
+    res.status(500).json({ error: "Database query failed" });
+  }
 });
-}
-);
-});
+
+
 
 app.get("/fetchProductslist", (req, res) => {
 db.query("SELECT * FROM imgproduct", (err, results) => {
