@@ -434,31 +434,29 @@ app.get("/fetchProductslist", async (req, res) => {
   const keywords = searchQuery.toLowerCase().split(/\s+/);
 
   try {
-    // Advanced Search (using ILIKE for case-insensitive matching in PostgreSQL)
     const conditions = keywords.map((_, index) => `LOWER(name) ILIKE $${index + 1}`).join(" AND ");
     const values = keywords.map((keyword) => `%${keyword}%`);
 
-    const advancedSearchQuery = `
-      SELECT * FROM imgproduct
+    const query = `
+      SELECT * FROM _imgproduct
       WHERE ${conditions}
     `;
 
-    const advancedResult = await pool.query(advancedSearchQuery, values);
+    const result = await pool.query(query, values);
 
-    if (advancedResult.rows.length > 0) {
-      return res.json(advancedResult.rows);
+    if (result.rows.length > 0) {
+      return res.json(result.rows);
     }
 
-    // If no advanced results, try exact match on 'img' column
     const exactMatchQuery = `
-      SELECT * FROM imgproduct
+      SELECT * FROM _imgproduct
       WHERE LOWER(img) = LOWER($1)
     `;
     const exactResult = await pool.query(exactMatchQuery, [searchQuery]);
 
     res.json(exactResult.rows);
   } catch (err) {
-    console.error("Error fetching data:", err.stack);
+    console.error("❌ Database query failed:", err.message);
     res.status(500).json({ error: "Database query failed" });
   }
 });
