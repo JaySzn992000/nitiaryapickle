@@ -77,7 +77,7 @@ app.post("/postqty", async (req, res) => {
   const { price, name, img } = req.body;
 
   const insertQuery = `
-    INSERT INTO ecart (price, name, img)
+    INSERT INTO _ecart (price, name, img)
     VALUES ($1, $2, $3)
   `;
 
@@ -113,7 +113,7 @@ app.post("/postqty", async (req, res) => {
   const { price, name, img } = req.body;
 
   const insertQuery = `
-    INSERT INTO ecart (price, name, img)
+    INSERT INTO _ecart (price, name, img)
     VALUES ($1, $2, $3)
   `;
 
@@ -266,7 +266,7 @@ app.post("/registerationPost", async (req, res) => {
 // });
 
 app.get("/fetchCartGet", async (req, res) => {
-  const fetchQuery = "SELECT * FROM ecart";
+  const fetchQuery = "SELECT * FROM _ecart";
 
   try {
     const result = await pool.query(fetchQuery);
@@ -306,7 +306,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/fetchProductslistTshirt", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -342,7 +342,7 @@ app.get("/fetchProductslistTshirt", async (req, res) => {
 app.get("/fetchProductslistChilli", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -378,7 +378,7 @@ app.get("/fetchProductslistChilli", async (req, res) => {
 app.get("/fetchProductslistJeans", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -414,7 +414,7 @@ app.get("/fetchProductslistJeans", async (req, res) => {
 app.get("/fetchProductslistShirt", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -450,7 +450,7 @@ app.get("/fetchProductslistShirt", async (req, res) => {
 app.get("/fetchProductslistJeans", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -486,7 +486,7 @@ app.get("/fetchProductslistJeans", async (req, res) => {
 app.get("/fetchProductslistPants", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -522,7 +522,7 @@ app.get("/fetchProductslistPants", async (req, res) => {
 app.get("/fetchProductslistSweatshirt", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -557,7 +557,7 @@ app.get("/fetchProductslistSweatshirt", async (req, res) => {
 app.get("/fetchProductslistShorts", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -592,7 +592,7 @@ app.get("/fetchProductslistShorts", async (req, res) => {
 app.get("/fetchProductslistTrouser", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -629,7 +629,7 @@ app.get("/fetchProductslistTrouser", async (req, res) => {
 app.get("/fetchProductslistBlazers", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -663,7 +663,7 @@ app.get("/fetchProductslistBlazers", async (req, res) => {
 app.get("/fetchProductslistHoodies", async (req, res) => {
   const exactMatchQuery = `
     SELECT *
-    FROM imgproduct
+    FROM _imgproduct
     WHERE LOWER(img) = LOWER($1)
   `;
 
@@ -780,7 +780,7 @@ app.get("/fetchProductslist", async (req, res) => {
 
 app.get("/fetchProductslist", async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM imgproduct");
+    const result = await pool.query("SELECT * FROM _imgproduct");
     res.json(result.rows);
   } catch (err) {
     console.error("Error fetching data:", err.message);
@@ -807,7 +807,7 @@ app.get("/fetchProductslist", async (req, res) => {
 
 
 app.get("/fetchProductDetails", async (req, res) => {
-  const fetchQuery = "SELECT * FROM imgproduct";
+  const fetchQuery = "SELECT * FROM _imgproduct";
 
   try {
     const result = await pool.query(fetchQuery);
@@ -995,7 +995,7 @@ app.post("/dletprdct", async (req, res) => {
     return res.status(400).json({ message: "Price is required" });
   }
 
-  const deleteQuery = "DELETE FROM ecart WHERE price = $1";
+  const deleteQuery = "DELETE FROM _ecart WHERE price = $1";
 
   try {
     const result = await pool.query(deleteQuery, [price]);
@@ -1058,7 +1058,7 @@ app.post("/addtocart", async (req, res) => {
   ]);
 
   const insertQuery = `
-    INSERT INTO carts (
+    INSERT INTO _carts (
       user_id, price, name, img, quantity, user_name, user_mobile, user_email
     ) VALUES 
     ${values.map((_, i) => `($${i * 8 + 1}, $${i * 8 + 2}, $${i * 8 + 3}, $${i * 8 + 4}, $${i * 8 + 5}, $${i * 8 + 6}, $${i * 8 + 7}, $${i * 8 + 8})`).join(", ")}
@@ -1095,7 +1095,7 @@ app.post("/addtocart", async (req, res) => {
 
 
 app.get("/fetchProductDetails", async (req, res) => {
-  const fetchQuery = "SELECT * FROM imgproduct";
+  const fetchQuery = "SELECT * FROM _imgproduct";
 
   try {
     const result = await pool.query(fetchQuery);
@@ -1122,7 +1122,7 @@ app.get("/fetchProductDetails", async (req, res) => {
 // });
 
 app.get("/fetchProductHistory", async (req, res) => {
-  const fetchQuery = "SELECT * FROM carts";
+  const fetchQuery = "SELECT * FROM _carts";
 
   try {
     const result = await pool.query(fetchQuery);
@@ -1153,7 +1153,7 @@ app.get("/fetchProductHistory", async (req, res) => {
 
 
 app.get("/historyfetchcustomer", async (req, res) => {
-  const fetchQuery = "SELECT * FROM custorder";
+  const fetchQuery = "SELECT * FROM _custorder";
 
   try {
     const result = await pool.query(fetchQuery);
@@ -1232,9 +1232,9 @@ app.post("/resetAdminPassword", async (req, res) => {
     });
   }
 
-  const checkUserQuery = "SELECT * FROM admindashboard WHERE adminuser = $1";
+  const checkUserQuery = "SELECT * FROM _admindashboard WHERE _adminuser = $1";
   const updatePasswordQuery =
-    "UPDATE admindashboard SET adminpass = $1 WHERE adminuser = $2";
+    "UPDATE _admindashboard SET _adminpass = $1 WHERE _adminuser = $2";
 
   try {
     const result = await pool.query(checkUserQuery, [adminuser]);
@@ -1313,9 +1313,9 @@ app.post("/updateAdminSimple", async (req, res) => {
   }
 
   const updateQuery = `
-    UPDATE admindashboard
-    SET adminuser = $1, adminpass = $2
-    WHERE adminuser = $3
+    UPDATE _admindashboard
+    SET _adminuser = $1, _adminpass = $2
+    WHERE _adminuser = $3
   `;
 
   try {
@@ -1385,8 +1385,8 @@ app.post("/fetchAdmin", async (req, res) => {
   const { adminuser, adminpass } = req.body;
 
   const loginQuery = `
-    SELECT * FROM admindashboard
-    WHERE adminuser = $1 AND adminpass = $2
+    SELECT * FROM _admindashboard
+    WHERE _adminuser = $1 AND _adminpass = $2
   `;
 
   try {
@@ -1475,9 +1475,9 @@ app.post("/registerAdmin", async (req, res) => {
     });
   }
 
-  const checkAdminQuery = "SELECT * FROM admindashboard WHERE adminuser = $1";
+  const checkAdminQuery = "SELECT * FROM _admindashboard WHERE _adminuser = $1";
   const insertAdminQuery =
-    "INSERT INTO admindashboard (adminuser, adminpass) VALUES ($1, $2)";
+    "INSERT INTO _admindashboard (_adminuser, _adminpass) VALUES ($1, $2)";
 
   try {
     const result = await pool.query(checkAdminQuery, [adminuser]);
@@ -1613,7 +1613,7 @@ app.post("/addcartaddress", async (req, res) => {
     .join(", ");
 
   const insertQuery = `
-    INSERT INTO custorder (
+    INSERT INTO _custorder (
       name, mob, email, id, productname, price, quantity, gender,
       add_name, country, pincode, address, state,
       mobilenumber, alternativenumber, emailid, date, amount,
@@ -1880,7 +1880,7 @@ app.post(
       : null;
 
     const query = `
-      INSERT INTO imgproduct (
+      INSERT INTO _imgproduct (
         img, name, price, file_path, sizes, file_path1, file_path2,
         file_path3, stock, description, review
       )
@@ -1945,7 +1945,7 @@ app.post("/api/update-product", upload.single("image"), async (req, res) => {
   const imagePath = req.file ? `/Images/${req.file.filename}` : null;
 
   try {
-    let query = "UPDATE imgproduct SET name = $1, price = $2";
+    let query = "UPDATE _imgproduct SET name = $1, price = $2";
     let queryParams = [newName, price];
     let paramIndex = 3;
 
@@ -1990,7 +1990,7 @@ app.post("/api/update-product", upload.single("image"), async (req, res) => {
 app.post("/deletebyname", async (req, res) => {
   const { name } = req.body;
 
-  const deleteQuery = "DELETE FROM imgproduct WHERE name = $1";
+  const deleteQuery = "DELETE FROM _imgproduct WHERE name = $1";
 
   try {
     const result = await pool.query(deleteQuery, [name]);
@@ -2022,7 +2022,7 @@ app.post("/deletebyname", async (req, res) => {
 // });
 
 app.get("/fetchDB", async (req, res) => {
-  const productQuery = "SELECT * FROM imgproduct";
+  const productQuery = "SELECT * FROM _imgproduct";
 
   try {
     const result = await pool.query(productQuery);
@@ -2050,7 +2050,7 @@ app.get("/fetchDB", async (req, res) => {
 // });
 
 app.get("/adminusersDeatils", async (req, res) => {
-  const productQuery = "SELECT * FROM admindashboard";
+  const productQuery = "SELECT * FROM _admindashboard";
 
   try {
     const result = await pool.query(productQuery);
@@ -2110,7 +2110,7 @@ app.get("/usersDetails", async (req, res) => {
 
 
 app.get("/amdinprofile", (req, res) => {
-const productQuery = "SELECT * FROM admindashboard";
+const productQuery = "SELECT * FROM _admindashboard";
 
 db.query(productQuery, (err, result) => {
 if (err) {
@@ -2139,7 +2139,7 @@ res.status(200).json({ products: result, total: totalProducts });
 
 
 app.get("/fetchCutomerOrder", async (req, res) => {
-  const productQuery = "SELECT * FROM custorder";
+  const productQuery = "SELECT * FROM _custorder";
 
   try {
     const result = await pool.query(productQuery);
@@ -2177,7 +2177,7 @@ app.get("/fetchCutomerOrder", async (req, res) => {
 app.post("/fetchCutomerOrder", async (req, res) => {
   const { date } = req.body;
 
-  let query = "SELECT * FROM custorder";
+  let query = "SELECT * FROM _custorder";
   let params = [];
 
   if (date) {
@@ -2226,7 +2226,7 @@ app.post("/updateOrderStatus", (req, res) => {
 const { razorpay_order_id } = req.body;
 
 const updateQuery = `
-UPDATE custorder 
+UPDATE _custorder 
 SET status_order = 'Order Delivered' 
 WHERE razorpay_order_id = ?
 `;
