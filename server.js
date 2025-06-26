@@ -231,7 +231,7 @@ app.post("/registerationPost", async (req, res) => {
 
     // Step 3: Insert new user
     const insertQuery = `
-      INSERT INTO registeration (name, email, password, mobileno)
+      INSERT INTO _registeration (name, email, password, mobileno)
       VALUES ($1, $2, $3, $4)
     `;
     await pool.query(insertQuery, [name, email, password, mobileno]);
@@ -884,7 +884,7 @@ app.post("/verifyemail", async (req, res) => {
     return res.status(400).json({ message: "Email is required" });
   }
 
-  const checkEmailQuery = "SELECT * FROM registeration WHERE email = $1";
+  const checkEmailQuery = "SELECT * FROM _registeration WHERE email = $1";
 
   try {
     const result = await pool.query(checkEmailQuery, [email]);
@@ -946,7 +946,7 @@ app.post("/resetpassword", async (req, res) => {
   }
 
   const updatePasswordQuery =
-    "UPDATE registeration SET password = $1 WHERE email = $2";
+    "UPDATE _registeration SET password = $1 WHERE email = $2";
 
   try {
     await pool.query(updatePasswordQuery, [password, email]);
@@ -1668,7 +1668,7 @@ app.post("/updateform", async (req, res) => {
   }
 
   const updateQuery = `
-    UPDATE registeration
+    UPDATE _registeration
     SET name = $1, email = $2, password = $3, mobileno = $4
     WHERE id = $5
   `;
@@ -2080,7 +2080,7 @@ app.get("/adminusersDeatils", async (req, res) => {
 
 
 app.get("/usersDetails", async (req, res) => {
-  const productQuery = "SELECT * FROM registeration";
+  const productQuery = "SELECT * FROM _registeration";
 
   try {
     const result = await pool.query(productQuery);
@@ -2264,7 +2264,7 @@ res.status(200).json({ success: true, message: "Order status updated" });
 
 
 app.get("/usertotalnofo", async (req, res) => {
-  const productQuery = "SELECT * FROM registeration";
+  const productQuery = "SELECT * FROM _registeration";
 
   try {
     const result = await pool.query(productQuery);
