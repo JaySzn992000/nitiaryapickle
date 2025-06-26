@@ -1386,18 +1386,16 @@ app.post("/fetchAdmin", async (req, res) => {
 
   const loginQuery = `
     SELECT * FROM _admindashboard
-    WHERE _adminuser = $1 AND _adminpass = $2
+    WHERE adminuser = $1 AND adminpass = $2
   `;
 
   try {
     const result = await pool.query(loginQuery, [adminuser, adminpass]);
 
     if (result.rows.length > 0) {
-      // User found
       console.log("Login successful");
       return res.status(200).json({ success: true, message: "Login successful" });
     } else {
-      // No match
       console.log("Invalid credentials");
       return res.status(401).json({ success: false, message: "Invalid credentials" });
     }
