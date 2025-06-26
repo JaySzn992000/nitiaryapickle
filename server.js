@@ -1475,10 +1475,9 @@ app.post("/registerAdmin", async (req, res) => {
     });
   }
 
-  const checkAdminQuery = "SELECT * FROM _admindashboard WHERE _adminuser = $1";
-  const insertAdminQuery =
-    "INSERT INTO _admindashboard (_adminuser, _adminpass) VALUES ($1, $2)";
-
+  const checkAdminQuery = "SELECT * FROM _admindashboard WHERE adminuser = $1";
+  const insertAdminQuery = "INSERT INTO _admindashboard (adminuser, adminpass) VALUES ($1, $2)";
+  
   try {
     const result = await pool.query(checkAdminQuery, [adminuser]);
 
