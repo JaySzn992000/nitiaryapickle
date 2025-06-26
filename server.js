@@ -205,7 +205,7 @@ app.post("/registerationPost", async (req, res) => {
   try {
     // Step 1: Check for duplicate mobile
     const checkMobileQuery = `
-      SELECT mobileno FROM registeration WHERE mobileno = $1 LIMIT 1
+      SELECT mobileno FROM _registeration WHERE mobileno = $1 LIMIT 1
     `;
     const mobileResult = await pool.query(checkMobileQuery, [mobileno]);
 
@@ -218,7 +218,7 @@ app.post("/registerationPost", async (req, res) => {
 
     // Step 2: Check for duplicate email
     const checkEmailQuery = `
-      SELECT email FROM registeration WHERE email = $1 LIMIT 1
+      SELECT email FROM _registeration WHERE email = $1 LIMIT 1
     `;
     const emailResult = await pool.query(checkEmailQuery, [email]);
 
@@ -836,7 +836,7 @@ app.get("/fetchProductDetails", async (req, res) => {
 //
 
 app.post("/fetchlogin", async (req, res) => {
-  const fetchQuery = "SELECT * FROM registeration";
+  const fetchQuery = "SELECT * FROM _registeration";
 
   try {
     const result = await pool.query(fetchQuery);
