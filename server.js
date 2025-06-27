@@ -1386,16 +1386,18 @@ app.post("/fetchAdmin", async (req, res) => {
 
   const loginQuery = `
     SELECT * FROM _admindashboard
-    WHERE adminuser = $1 AND adminpass = $2
+    WHERE _adminuser = $1 AND _adminpass = $2
   `;
 
   try {
     const result = await pool.query(loginQuery, [adminuser, adminpass]);
 
     if (result.rows.length > 0) {
+      // User found
       console.log("Login successful");
       return res.status(200).json({ success: true, message: "Login successful" });
     } else {
+      // No match
       console.log("Invalid credentials");
       return res.status(401).json({ success: false, message: "Invalid credentials" });
     }
@@ -1473,9 +1475,10 @@ app.post("/registerAdmin", async (req, res) => {
     });
   }
 
-  const checkAdminQuery = "SELECT * FROM _admindashboard WHERE adminuser = $1";
-  const insertAdminQuery = "INSERT INTO _admindashboard (adminuser, adminpass) VALUES ($1, $2)";
-  
+  const checkAdminQuery = "SELECT * FROM _admindashboard WHERE _adminuser = $1";
+  const insertAdminQuery =
+    "INSERT INTO _admindashboard (_adminuser, _adminpass) VALUES ($1, $2)";
+
   try {
     const result = await pool.query(checkAdminQuery, [adminuser]);
 
@@ -1564,7 +1567,6 @@ app.post("/registerAdmin", async (req, res) => {
 
 
 app.post("/addcartaddress", async (req, res) => {
-
   const { user, cartItems, addressDetails, paymentDetails } = req.body;
 
   if (
@@ -1708,69 +1710,53 @@ console.log(`Server is running PORT on ${PORT}`);
 
 
 const razorpayInstance = new Razorpay({
-  key_id: "rzp_live_Kh5Fut1EpwDwF5",
-  key_secret: "zV2WqzWm6CTf3qH5i0xnO1La",
-});
-
-// CORS Middleware (अगर जरूरत हो)
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
+key_id: "rzp_live_Kh5Fut1EpwDwF5", //  Razorpay key_id
+key_secret: "zV2WqzWm6CTf3qH5i0xnO1La", // Razorpay key_secret
 });
 
 app.post("/create-order", async (req, res) => {
-  const { amount } = req.body;
+const { amount } = req.body;
 
-  if (!amount || amount <= 0) {
-    return res.status(400).json({ error: "Invalid amount" });
-  }
+if (!amount || amount <= 0) {
+return res.status(400).json({ error: "Invalid amount" });
+}
 
-  const options = {
-    amount: amount * 100,
-    currency: "INR",
-    receipt: `receipt#${Date.now()}`,
-    payment_capture: 1,
-  };
+const options = {
+amount: amount * 100, // Amount in
+// paise (multiply by 100)
+currency: "INR",
+receipt: `receipt#${Date.now()}`, // Unique receipt ID
+payment_capture: 1, // Auto-capture payments
+};
 
-  try {
-    const order = await razorpayInstance.orders.create(options);
-    res.json(order);
-  } catch (err) {
-    console.error("Error creating Razorpay order:", err);
-    res.status(500).json({ error: "Failed to create order" });
-  }
+try {
+const order = await razorpayInstance.orders.create(options);
+res.json(order); // Return
+// the created order
+} catch (err) {
+console.error("Error creating Razorpay order:", err);
+res.status(500).json({ error: "Failed to create order" });
+}
 });
 
 app.post("/verify-payment", (req, res) => {
-  const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
+req.body;
 
-  const crypto = require("crypto");
-  const hmac = crypto.createHmac("sha256", razorpayInstance.key_secret);
+const crypto = require("crypto");
+const hmac = crypto.createHmac("sha256", razorpayInstance.key_secret);
 
-  hmac.update(razorpay_order_id + "|" + razorpay_payment_id);
-  const generated_signature = hmac.digest("hex");
+hmac.update(razorpay_order_id + "|" + razorpay_payment_id);
+const generated_signature = hmac.digest("hex");
 
-  if (generated_signature === razorpay_signature) {
-    res.json({ success: true });
-  } else {
-    res.status(400).json({ error: "Payment verification failed" });
-  }
+if (generated_signature === razorpay_signature) {
+// Payment is verified
+res.json({ success: true });
+} else {
+// Payment verification failed
+res.status(400).json({ error: "Payment verification failed" });
+}
 });
-
-// Add cart address endpoint
-app.post("/addcartaddress", async (req, res) => {
-  try {
-    // यहाँ आपको डेटाबेस में डेटा सेव करने का लॉजिक डालना है
-    console.log("Received order data:", req.body);
-    res.json({ success: true, message: "Order saved successfully" });
-  } catch (error) {
-    console.error("Error saving order:", error);
-    res.status(500).json({ error: "Failed to save order" });
-  }
-});
-
-
 
 // Dashboard
 
