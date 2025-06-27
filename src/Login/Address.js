@@ -8,106 +8,220 @@ import "./Address.css";
 
 const Address = () => {
 
+const [loggedInUser, setLoggedInUser] = useState(null);
+const [cartProducts, setCartProducts] = useState([]);
+const [formData, setFormData] = useState({
+gender: "Mr.",
+addressname: "",
+country: "",
+pincode: "",
+address: "",
+state: "",
+mobilenumber: "",
+alternativenumber: "",
+emailid: ""
+});
+
+const resetForm = () => {
+setFormData({
+gender: "Mr.",
+addressname: "",
+country: "",
+pincode: "",
+address: "",
+state: "",
+mobilenumber: "",
+alternativenumber: "",
+emailid: ""
+});
+};
+
+
+const location = useLocation();
+const totalAmount = location.state?.totalAmount || 0;
+const quantities = location.state?.quantities || [];
+
+
+useEffect(() => {
+const storedUser = localStorage.getItem("loggedInUser");
+if (storedUser) {
+setLoggedInUser(JSON.parse(storedUser));
+setCartProducts(JSON.parse(localStorage.getItem("cart")) || []);
+}
+}, []);
+
+
+const handleChange = (e) => {
+const { name, value } = e.target;
+setFormData({
+...formData,
+[name]: value
+});
+};
+
+
+const validateForm = () => {
+
+const alphaOnly = formData.addressname.replace(/[^a-zA-Z]/g, '');
+if (alphaOnly.length < 3) {
+alert("Name must be at least 3 characters long.");
+return false;
+}
+
+
+if (!/^\d+$/.test(formData.pincode)) {
+  alert("Pincode must contain only digits.");
+  return false;
+} else if (formData.pincode.length < 6) {
+  alert("Pincode must be at least 6 digits.");
+  return false;
+}
+
+if (!/^\d{6}$/.test(formData.pincode)) {
+alert("Pincode must contain only digits");
+return false;
+}
+
+if (!/^\d{10}$/.test(formData.mobilenumber)) {
+alert("Mobile number must be exactly 10 digits");
+return false;
+}
+
+if (formData.alternativenumber && !/^\d{10}$/.test(formData.alternativenumber)) {
+alert("Alternative number must be exactly 10 digits");
+return false;
+}
+
+if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.emailid)) {
+alert("Invalid email format");
+return false;
+}
+
+return true;
+};
+
+
+const [isProcessing, setIsProcessing] = useState(false);
+
 const handleSubmit = async (e) => {
-  
-  e.preventDefault();
+e.preventDefault();
 
-  if (!loggedInUser) {
-    alert("Please log in first.");
-    return;
-  }
+// ✅ 1. Login Check
+if (!loggedInUser) {
+alert("Please log in first.");
+return;
+}
 
-  if (!validateForm()) {
-    return;
-  }
+// ✅ 2. Form Validation
+if (!validateForm()) {
+return;
+}
 
-  setIsProcessing(true);
+setIsProcessing(true); // 🔄 Show processing
 
-  try {
-    const response = await axios.post("https://picklewebsite.onrender.com/create-order", {
-      amount: totalAmount,
-    });
+try {
+// ✅ 3. Create Razorpay Order from backend
+const response = await axios.post("https://picklewebsite.onrender.com/create-order", {
+amount: totalAmount,
+});
 
-    const { id: orderId } = response.data;
+const { id: orderId } = response.data;
 
-    const options = {
-      key: "rzp_live_Kh5Fut1EpwDwF5",
-      amount: totalAmount * 100,
-      currency: "INR",
-      name: "Your Company Name",
-      description: "Test Transaction",
-      order_id: orderId,
-      handler: async (response) => {
-        try {
-          const paymentVerificationResponse = await axios.post(
-            "https://picklewebsite.onrender.com/verify-payment",
-            response
-          );
+// ✅ 4. Setup Razorpay Payment Options
+const options = {
+key: "rzp_live_Kh5Fut1EpwDwF5",
+amount: totalAmount * 100,
+currency: "INR",
+name: "Your Company Name",
+description: "Test Transaction",
+order_id: orderId,
 
-          if (paymentVerificationResponse.data.success) {
-            const dataToSend = {
-              user: {
-                name: loggedInUser.name,
-                mob: loggedInUser.mobileno,
-                email: loggedInUser.email,
-              },
-              cartItems: cartProducts.map((product, idx) => ({
-                id: product.id,
-                productName: product.name,
-                price: product.price,
-                file_path: product.file_path,
-                quantity: quantities[idx] || 1,
-              })),
-              addressDetails: formData,
-              paymentDetails: {
-                razorpay_order_id: orderId,
-                razorpay_payment_id: response.razorpay_payment_id,
-                amount: totalAmount,
-                payment_status: "Successful", // स्पेलिंग सही की है
-              },
-            };
+// ✅ 5. This runs after payment is done
+handler: async (response) => {
+console.log("Razorpay Response:", response); // ✅ Log response
 
-            await axios.post(
-              "https://picklewebsite.onrender.com/addcartaddress",
-              dataToSend
-            );
-            
-            resetForm();
-            alert("Order successfully placed!");
-          } else {
-            alert("Payment verification failed!");
-          }
-        } catch (error) {
-          console.error("Error in payment handler:", error);
-          alert("Error processing payment. Please contact support.");
-        }
-      },
-      prefill: {
-        name: loggedInUser?.name || "",
-        email: loggedInUser?.email || "",
-        contact: loggedInUser?.mobileno || "",
-      },
-      theme: {
-        color: "#3399cc",
-      },
-    };
+if (!loggedInUser) {
+alert("Please log in first.");
+return;
+}
 
-    const paymentObject = new window.Razorpay(options);
-    paymentObject.on("payment.failed", function (response) {
-      alert("Payment failed. Please try again.");
-      console.error("Payment failed:", response);
-    });
-    
-    paymentObject.open();
-  } catch (error) {
-    console.error(
-      "Error during payment:",
-      error.response ? error.response.data : error.message
-    );
-    alert("Error creating payment order. Please try again.");
-  } finally {
-    setIsProcessing(false);
-  }
+try {
+// ✅ 6. Verify payment from backend
+const paymentVerificationResponse = await axios.post(
+"https://picklewebsite.onrender.com/verify-payment",
+response
+);
+
+if (paymentVerificationResponse.data.success) {
+// ✅ 7. Prepare full data to send to backend
+const dataToSend = {
+user: {
+name: loggedInUser.name,
+mob: loggedInUser.mobileno,
+email: loggedInUser.email,
+},
+cartItems: cartProducts.map((product, idx) => ({
+id: product.id,
+productName: product.name,
+price: product.price,
+file_path: product.file_path,
+quantity: quantities[idx] || 1,
+})),
+addressDetails: formData, // ✅ formData must have `add_name` field
+paymentDetails: {
+razorpay_order_id: orderId,
+razorpay_payment_id: response.razorpay_payment_id,
+amount: totalAmount,
+payment_status: "Successful",
+},
+};
+
+// ✅ 8. Place Order
+const orderSaveRes = await axios.post(
+"https://picklewebsite.onrender.com/addcartaddress",
+dataToSend
+);
+
+// ✅ 9. Confirm Save Success
+if (orderSaveRes.status === 200) {
+resetForm();
+alert("Order successfully placed!");
+} else {
+alert("Order saved failed. Try again.");
+console.error("Order save error:", orderSaveRes.data);
+}
+
+} else {
+alert("Payment verification failed!");
+console.error("Payment verification failed");
+}
+} catch (verifyErr) {
+alert("Error in payment verification.");
+console.error("Verify Error:", verifyErr);
+}
+},
+
+prefill: {
+name: loggedInUser?.name || "",
+email: loggedInUser?.email || "",
+contact: loggedInUser?.mobileno || "",
+},
+
+theme: {
+color: "#3399cc",
+},
+};
+
+// ✅ 10. Open Payment Window
+setIsProcessing(false);
+const paymentObject = new window.Razorpay(options);
+paymentObject.open();
+} catch (err) {
+setIsProcessing(false);
+alert("Something went wrong while creating order.");
+console.error("Create Order Error:", err.response?.data || err.message);
+}
+
 };
 
 

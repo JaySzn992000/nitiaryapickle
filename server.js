@@ -10,6 +10,7 @@ const fs = require("fs");
 
 
 const app = express();
+app.use(express.json());
 
 require("dotenv").config();
 const pool = require("./config"); 
@@ -1738,6 +1739,7 @@ console.error("Error creating Razorpay order:", err);
 res.status(500).json({ error: "Failed to create order" });
 }
 });
+
 
 app.post("/verify-payment", (req, res) => {
 const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
