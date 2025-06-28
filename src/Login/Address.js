@@ -104,30 +104,29 @@ return true;
 const [isProcessing, setIsProcessing] = useState(false);
 
 const handleSubmit = async (e) => {
-e.preventDefault();
+e.preventDefault(); 
 
-// ✅ 1. Login Check
 if (!loggedInUser) {
 alert("Please log in first.");
 return;
 }
 
-// ✅ 2. Form Validation
+
 if (!validateForm()) {
 return;
 }
 
-setIsProcessing(true); // 🔄 Show processing
+setIsProcessing(true); // 🟢 Immediately 
+// show "Processing..."
 
 try {
-// ✅ 3. Create Razorpay Order from backend
 const response = await axios.post("https://picklewebsite.onrender.com/create-order", {
 amount: totalAmount,
 });
 
 const { id: orderId } = response.data;
 
-// ✅ 4. Setup Razorpay Payment Options
+
 const options = {
 key: "rzp_live_Kh5Fut1EpwDwF5",
 amount: totalAmount * 100,
@@ -135,91 +134,72 @@ currency: "INR",
 name: "Your Company Name",
 description: "Test Transaction",
 order_id: orderId,
-
-// ✅ 5. This runs after payment is done
 handler: async (response) => {
-console.log("Razorpay Response:", response); // ✅ Log response
-
 if (!loggedInUser) {
 alert("Please log in first.");
 return;
 }
 
-try {
-// ✅ 6. Verify payment from backend
+
 const paymentVerificationResponse = await axios.post(
 "https://picklewebsite.onrender.com/verify-payment",
 response
 );
 
+
 if (paymentVerificationResponse.data.success) {
-// ✅ 7. Prepare full data to send to backend
 const dataToSend = {
 user: {
 name: loggedInUser.name,
 mob: loggedInUser.mobileno,
 email: loggedInUser.email,
 },
-cartItems: cartProducts.map((product, idx) => ({
+cartItems: cartProducts.map((product,idx) => ({
 id: product.id,
 productName: product.name,
 price: product.price,
 file_path: product.file_path,
-quantity: quantities[idx] || 1,
+quantity: quantities[idx] || 1, 
 })),
-addressDetails: formData, // ✅ formData must have `add_name` field
+addressDetails: formData,
 paymentDetails: {
 razorpay_order_id: orderId,
 razorpay_payment_id: response.razorpay_payment_id,
 amount: totalAmount,
-payment_status: "Successful",
+payment_status: "Sucessfull",
 },
 };
 
-// ✅ 8. Place Order
-const orderSaveRes = await axios.post(
+
+await axios.post(
 "https://picklewebsite.onrender.com/addcartaddress",
 dataToSend
 );
-
-// ✅ 9. Confirm Save Success
-if (orderSaveRes.status === 200) {
 resetForm();
 alert("Order successfully placed!");
 } else {
-alert("Order saved failed. Try again.");
-console.error("Order save error:", orderSaveRes.data);
-}
-
-} else {
 alert("Payment verification failed!");
-console.error("Payment verification failed");
-}
-} catch (verifyErr) {
-alert("Error in payment verification.");
-console.error("Verify Error:", verifyErr);
 }
 },
-
 prefill: {
 name: loggedInUser?.name || "",
 email: loggedInUser?.email || "",
 contact: loggedInUser?.mobileno || "",
 },
-
 theme: {
 color: "#3399cc",
 },
 };
 
-// ✅ 10. Open Payment Window
-setIsProcessing(false);
+
 const paymentObject = new window.Razorpay(options);
-paymentObject.open();
-} catch (err) {
 setIsProcessing(false);
-alert("Something went wrong while creating order.");
-console.error("Create Order Error:", err.response?.data || err.message);
+paymentObject.open();
+} catch (error) {
+console.error(
+"Error during payment:",
+error.response ? error.response.data : error.message
+);
 }
 
 };
