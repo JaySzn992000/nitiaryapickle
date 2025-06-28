@@ -6,16 +6,21 @@ const multer = require("multer");
 const path = require("path");
 const Razorpay = require("razorpay");
 const fs = require("fs");
+const app = express(); 
 
-
-
-const app = express();
-app.use(express.json());
 
 require("dotenv").config();
 const pool = require("./config"); 
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://pickle-website-ten.vercel.app'], 
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
+
+
+
+app.use(express.json());
 app.use(bodyParser.json());
 const PORT = 3001;
 
@@ -1580,9 +1585,9 @@ app.post("/addcartaddress", async (req, res) => {
   ) {
     return res.status(400).json({ message: "Invalid data" });
   }
-
+  
   try {
-    
+
     const client = await pool.connect();
 
     const insertQuery = `
