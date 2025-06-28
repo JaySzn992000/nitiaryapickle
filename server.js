@@ -1568,6 +1568,7 @@ app.post("/registerAdmin", async (req, res) => {
 
 
 app.post("/addcartaddress", async (req, res) => {
+
   const { user, cartItems, addressDetails, paymentDetails } = req.body;
 
   if (
@@ -1580,59 +1581,63 @@ app.post("/addcartaddress", async (req, res) => {
     return res.status(400).json({ message: "Invalid data" });
   }
 
-  const values = cartItems.map((item) => [
-    user.name,
-    user.mob,
-    user.email,
-    item.id,
-    item.productName,
-    item.price,
-    item.quantity || 1,
-    addressDetails.gender,
-    addressDetails.add_name,
-    addressDetails.country,
-    addressDetails.pincode,
-    addressDetails.address,
-    addressDetails.state,
-    addressDetails.mobilenumber,
-    addressDetails.alternativenumber,
-    addressDetails.emailid,
-    new Date(), // auto date
-    paymentDetails.amount,
-    paymentDetails.payment_status,
-    paymentDetails.razorpay_order_id,
-    paymentDetails.razorpay_payment_id,
-    item.file_path,
-  ]);
-
-  // Prepare dynamic placeholders like ($1,$2,...), ($23,$24,...)
-  const valuePlaceholders = values
-    .map(
-      (_, i) =>
-        `(${Array.from({ length: 22 }, (_, j) => `$${i * 22 + j + 1}`).join(", ")})`
-    )
-    .join(", ");
-
-  const insertQuery = `
-    INSERT INTO _custorder (
-      name, mob, email, id, productname, price, quantity, gender,
-      add_name, country, pincode, address, state,
-      mobilenumber, alternativenumber, emailid, date, amount,
-      payment_status, razorpay_order_id, razorpay_payment_id, file_path
-    )
-    VALUES ${valuePlaceholders}
-  `;
-
-  const flatValues = values.flat();
-
   try {
-    await pool.query(insertQuery, flatValues);
-    console.log("Order successfully placed");
+    
+    const client = await pool.connect();
+
+    const insertQuery = `
+      INSERT INTO custorder (
+        name, mob, email, id, productname, price, quantity,
+        gender, add_name, country, pincode, address, state,
+        mobilenumber, alternativenumber, emailid,
+        date, amount, payment_status,
+        razorpay_order_id, razorpay_payment_id, file_path
+      )
+      VALUES (
+        $1, $2, $3, $4, $5, $6, $7,
+        $8, $9, $10, $11, $12, $13,
+        $14, $15, $16,
+        $17, $18, $19,
+        $20, $21, $22
+      )
+    `;
+
+    for (const item of cartItems) {
+      const values = [
+        user.name,
+        user.mob,
+        user.email,
+        item.id,
+        item.productName,
+        item.price,
+        item.quantity || 1,
+        addressDetails.gender,
+        addressDetails.add_name,
+        addressDetails.country,
+        addressDetails.pincode,
+        addressDetails.address,
+        addressDetails.state,
+        addressDetails.mobilenumber,
+        addressDetails.alternativenumber,
+        addressDetails.emailid,
+        new Date(),
+        paymentDetails.amount,
+        paymentDetails.payment_status,
+        paymentDetails.razorpay_order_id,
+        paymentDetails.razorpay_payment_id,
+        item.file_path,
+      ];
+
+      await client.query(insertQuery, values);
+    }
+
+    client.release();
     res.status(200).json({ message: "Order successfully placed" });
   } catch (err) {
-    console.error("Error occurred:", err.message);
+    console.error("Error occurred:", err);
     res.status(500).json({ message: "Error occurred", error: err.message });
   }
+  
 });
 
 //
