@@ -123,9 +123,9 @@ const handleSubmit = async (e) => {
     });
 
     const { id: orderId } = orderResponse.data;
-
+    
     const options = {
-      key: "rzp_live_Kh5Fut1EpwDwF5",
+      key: "rzp_live_Zm7uF61IDcY0t9",
       amount: totalAmount * 100,
       currency: "INR",
       name: "Your Company Name",
@@ -232,7 +232,7 @@ required
 </select>
 </div>
 
-
+<h2>Test 1</h2>
 <div>
 <h4>Name</h4>
 <input

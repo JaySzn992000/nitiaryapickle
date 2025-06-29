@@ -1721,8 +1721,8 @@ console.log(`Server is running PORT on ${PORT}`);
 
 
 const razorpayInstance = new Razorpay({
-key_id: "rzp_live_Kh5Fut1EpwDwF5", //  Razorpay key_id
-key_secret: "zV2WqzWm6CTf3qH5i0xnO1La", // Razorpay key_secret
+key_id: "rzp_live_Zm7uF61IDcY0t9", //  Razorpay key_id
+key_secret: "FgZimfWqOEOLs4ejcIZHO7yc", // Razorpay key_secret
 });
 
 app.post("/create-order", async (req, res) => {
