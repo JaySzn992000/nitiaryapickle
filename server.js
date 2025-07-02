@@ -12,26 +12,17 @@ const app = express();
 require("dotenv").config();
 const pool = require("./config");
 
-app.use(cors({
-origin: ['https://pickle-website-ten.vercel.app'], 
-methods: ['GET', 'POST'],
-credentials: true
-}));
-
-
-app.use(express.json());
+app.use(cors());
 app.use(bodyParser.json());
 const PORT = 3001;
 
 
 const db = mysql.createConnection({
-host: "localhost",
-database: "ecomweb1",
-user: "root",
-password: "jay992000",
+  host: "127.0.0.1",     
+  user: "root",
+  password: "jay992000",
+  database: "ecomweb1",
 });
-
-
 
 
 app.get("/", async (req, res) => {
@@ -1720,9 +1711,10 @@ console.log(`Server is running PORT on ${PORT}`);
 
 
 const razorpayInstance = new Razorpay({
-key_id: "rzp_live_Zm7uF61IDcY0t9", //  Razorpay key_id
-key_secret: "FgZimfWqOEOLs4ejcIZHO7yc", // Razorpay key_secret
+key_id: "rzp_live_Kh5Fut1EpwDwF5", //  Razorpay key_id
+key_secret: "zV2WqzWm6CTf3qH5i0xnO1La", // Razorpay key_secret
 });
+
 
 app.post("/create-order", async (req, res) => {
 const { amount } = req.body;
@@ -1768,6 +1760,7 @@ res.json({ success: true });
 res.status(400).json({ error: "Payment verification failed" });
 }
 });
+
 
 // Dashboard
 

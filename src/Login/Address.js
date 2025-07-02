@@ -25,7 +25,7 @@ const Address = () => {
     }
 
     const options = {
-      key: "rzp_live_Zm7uF61IDcY0t9", // ✅ Replace with your live/test key
+      key: "rzp_live_Kh5Fut1EpwDwF5", // ✅ Replace with your live/test key
       amount: 100, // ₹1 = 100 paise
       currency: "INR",
       name: "Jsonsoftech Test",
