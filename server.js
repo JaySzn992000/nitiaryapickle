@@ -12,8 +12,9 @@ const app = express();
 require("dotenv").config();
 const pool = require("./config");
 
+
 app.use(cors({
-origin: ['https://pickle-website-ten.vercel.app'], 
+origin: ['https://nitiaryapickle-po28.vercel.app'], 
 methods: ['GET', 'POST'],
 credentials: true
 }));

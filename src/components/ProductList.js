@@ -16,7 +16,6 @@ const [wishlistStatus, setWishlistStatus] = useState({});
 const [cartCount, setCartCount] = useState(0);
 const [arrayStore, setArrayStore] = useState([]);
 
-
 useEffect(() => {
 const storedWishlistStatus =
 JSON.parse(localStorage.getItem("wishlistStatus")) || {};
@@ -52,7 +51,7 @@ console.error("Error fetching products:", error);
 });
 } else {
 axios
-.get("https://nitiaryapickle.onrender.com/fetchproductslist")
+.get("https://nitiaryapickle.onrender.com/fetchProductslist")
 .then((response) => {
 setAllProducts(response.data);
 setFilteredProducts(response.data);
