@@ -22,7 +22,7 @@ JSON.parse(localStorage.getItem("wishlistStatus")) || {};
 setWishlistStatus(storedWishlistStatus);
 
 axios
-.get("https://nitiaryapickle.onrender.com/fetchProductslist")
+.get("https://nitiaryapickle.onrender.com/fetchproductslist")
 .then((response) => {
 setArrayStore(response.data);
 setFilteredProducts(response.data);
@@ -39,7 +39,7 @@ const query = new URLSearchParams(location.search).get("search");
 useEffect(() => {
 if (query) {
 axios
-.get("https://nitiaryapickle.onrender.com/fetchProductslist", {
+.get("https://nitiaryapickle.onrender.com/fetchproductslist", {
 params: { search: query },
 })
 .then((response) => {
@@ -160,7 +160,7 @@ wishlistStatus[productlist.id] ? "wishlist-active" : ""
 <Link to={`/products/${slugify(productlist.name)}/${productlist.id}`}>
 
 <img
-src={`https://nitiaryapickle.onrender.com${productlist.file_path}`}
+src={`https://nitiaryapickle.onrender.com/fetchproductslist${productlist.file_path}`}
 alt={productlist.name}
 loading="lazy"
 />
