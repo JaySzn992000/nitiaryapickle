@@ -13,7 +13,7 @@ require("dotenv").config();
 const pool = require("./config");
 
 app.use(cors({
-origin: ['https://nitiaryapickle.vercel.app'], 
+origin: ['https://pickle-website-ten.vercel.app'], 
 methods: ['GET', 'POST'],
 credentials: true
 }));
@@ -21,12 +21,7 @@ credentials: true
 
 app.use(express.json());
 app.use(bodyParser.json());
-const PORT = process.env.PORT || 3001;
-
-
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on PORT ${PORT}`);
-})
+const PORT = 3001;
 
 
 const db = mysql.createConnection({
@@ -35,6 +30,8 @@ database: "ecomweb1",
 user: "root",
 password: "jay992000",
 });
+
+
 
 
 app.get("/", async (req, res) => {
@@ -1702,9 +1699,9 @@ app.post("/updateform", async (req, res) => {
 
 // for Laptop ..
 
-// app.listen(PORT, () => {
-// console.log(`Server is running PORT on ${PORT}`);
-// });
+app.listen(PORT, () => {
+console.log(`Server is running PORT on ${PORT}`);
+});
 
 
 // for mobile ..
@@ -1723,8 +1720,8 @@ app.post("/updateform", async (req, res) => {
 
 
 const razorpayInstance = new Razorpay({
-key_id: "rzp_live_Kh5Fut1EpwDwF5", //  Razorpay key_id
-key_secret: "zV2WqzWm6CTf3qH5i0xnO1La", // Razorpay key_secret
+key_id: "rzp_live_Zm7uF61IDcY0t9", //  Razorpay key_id
+key_secret: "FgZimfWqOEOLs4ejcIZHO7yc", // Razorpay key_secret
 });
 
 app.post("/create-order", async (req, res) => {
@@ -2289,4 +2286,3 @@ app.get("/usertotalnofo", async (req, res) => {
     res.status(500).json({ message: "Fetch error", error: err.message });
   }
 });
-
