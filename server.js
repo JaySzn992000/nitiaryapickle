@@ -32,8 +32,6 @@ password: "jay992000",
 });
 
 
-
-
 app.get("/", async (req, res) => {
   res.send("✅ Backend is Live & Working");
 });
@@ -1699,10 +1697,14 @@ app.post("/updateform", async (req, res) => {
 
 // for Laptop ..
 
-app.listen(PORT, () => {
-console.log(`Server is running PORT on ${PORT}`);
-});
+// app.listen(PORT, () => {
+// console.log(`Server is running PORT on ${PORT}`);
+// });
 
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on PORT ${PORT}`);
+})
 
 // for mobile ..
 
