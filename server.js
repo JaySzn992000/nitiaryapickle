@@ -21,7 +21,12 @@ credentials: true
 
 app.use(express.json());
 app.use(bodyParser.json());
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
+
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on PORT ${PORT}`);
+})
 
 
 const db = mysql.createConnection({
@@ -1701,10 +1706,6 @@ app.post("/updateform", async (req, res) => {
 // console.log(`Server is running PORT on ${PORT}`);
 // });
 
-
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on PORT ${PORT}`);
-})
 
 // for mobile ..
 
