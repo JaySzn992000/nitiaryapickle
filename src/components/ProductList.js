@@ -165,7 +165,6 @@ wishlistStatus[productlist.id] ? "wishlist-active" : ""
   loading="lazy"
 />
 
-
 </Link>
 
 {/*  */}
