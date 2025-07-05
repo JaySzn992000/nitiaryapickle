@@ -160,7 +160,7 @@ wishlistStatus[productlist.id] ? "wishlist-active" : ""
 <Link to={`/products/${slugify(productlist.name)}/${productlist.id}`}>
 
 <img
-src={`https://nitiaryapickle.onrender.com${productlist.file_path}`}
+src={`https://nitiaryapickle.onrender.com/Images${productlist.file_path}`}
 alt={productlist.name}
 loading="lazy"
 />
