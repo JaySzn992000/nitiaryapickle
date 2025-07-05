@@ -362,7 +362,6 @@ app.get("/fetchProductslistChilli", async (req, res) => {
 });
 
 
-
 // app.get("/fetchProductslistJeans", (req, res) => {
 // const exactMatchQuery = `
 // SELECT *

@@ -29,7 +29,7 @@ const [message, setMessage] = useState("");
 
 useEffect(() => {
 
-fetch(`https://picklewebsite.onrender.com/${id}`)
+fetch(`https://nitiaryapickle.onrender.com/${id}`)
 .then(res => res.json())
 .then(data => {
 });
@@ -41,7 +41,7 @@ useEffect(() => {
 const fetchProduct = async () => {
 try {
 const response = await axios.get(
-"https://picklewebsite.onrender.com/fetchProductslist"
+"https://nitiaryapickle.onrender.com/fetchProductslist"
 );
 const data = response.data;
 const product = data.find((product) => product.id === parseInt(id));
@@ -170,7 +170,7 @@ content="https://yourdomain.com/images/pickle-default.jpg"
 
 <img
 className="product_img"
-src={`https://picklewebsite.onrender.com${arrayStore.file_path}`}
+src={`https://nitiaryapickle.onrender.com${arrayStore.file_path}`}
 alt=''
 loading="lazy"
 />
@@ -179,7 +179,7 @@ loading="lazy"
 
 <img
 className="product_img"
-src={`https://picklewebsite.onrender.com${arrayStore.file_path1}`}
+src={`https://nitiaryapickle.onrender.com${arrayStore.file_path1}`}
 alt=''
 loading="lazy"
 />
@@ -188,7 +188,7 @@ loading="lazy"
 
 <img
 className="product_img"
-src={`https://picklewebsite.onrender.com${arrayStore.file_path2}`}
+src={`https://nitiaryapickle.onrender.com${arrayStore.file_path2}`}
 alt=''
 loading="lazy"
 />
@@ -197,7 +197,7 @@ loading="lazy"
 
 <img
 className="product_img"
-src={`https://picklewebsite.onrender.com${arrayStore.file_path3}`}
+src={`https://nitiaryapickle.onrender.com${arrayStore.file_path3}`}
 alt=''
 loading="lazy"
 />
@@ -213,7 +213,7 @@ desktop view */}
 <div className="thumbnails-container">
 <img
 className="thumbnail"
-src={`https://picklewebsite.onrender.com${arrayStore.file_path1}`}
+src={`https://nitiaryapickle.onrender.com${arrayStore.file_path1}`}
 alt="home made pickles"
 loading="lazy"
 onClick={() => handleThumbnailClick(arrayStore.file_path1)}
@@ -221,7 +221,7 @@ onClick={() => handleThumbnailClick(arrayStore.file_path1)}
 
 <img
 className="thumbnail"
-src={`https://picklewebsite.onrender.com${arrayStore.file_path2}`}
+src={`https://nitiaryapickle.onrender.com${arrayStore.file_path2}`}
 alt="ingredients used pickles"
 loading="lazy"
 onClick={() => handleThumbnailClick(arrayStore.file_path2)}
@@ -229,7 +229,7 @@ onClick={() => handleThumbnailClick(arrayStore.file_path2)}
 
 <img
 className="thumbnail"
-src={`https://picklewebsite.onrender.com${arrayStore.file_path3}`}
+src={`https://nitiaryapickle.onrender.com${arrayStore.file_path3}`}
 alt="customized pickles"
 onClick={() => handleThumbnailClick(arrayStore.file_path3)}
 loading="lazy"
@@ -245,7 +245,7 @@ with zoom */}
 <Zoom>
 <img
 className="product_img"
-src={`https://picklewebsite.onrender.com${mainImage}`}
+src={`https://nitiaryapickle.onrender.com${mainImage}`}
 alt={arrayStore.name}
 loading="lazy"
 />

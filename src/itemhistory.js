@@ -28,7 +28,7 @@ useEffect(() => {
 const customerFetch = async () => {
 try {
 const response = await fetch(
-"https://picklewebsite.onrender.com/historyfetchcustomer"
+"https://nitiaryapickle.onrender.com/historyfetchcustomer"
 );
 const data = await response.json();
 if (loggedInUser) {
@@ -103,7 +103,7 @@ Purchase History ({quantities.length})
 <td>
 {item.file_path && (
 <img
-src={`https://picklewebsite.onrender.com${item.file_path}`}
+src={`https://nitiaryapickle.onrender.com${item.file_path}`}
 alt={item.productname}
 className="custorders-imageItem"
 />

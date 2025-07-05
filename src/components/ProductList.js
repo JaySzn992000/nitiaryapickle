@@ -163,7 +163,7 @@ wishlistStatus[productlist.id] ? "wishlist-active" : ""
   src={`https://nitiaryapickle.onrender.com${productlist.file_path}`}
   alt={productlist.name}
   loading="lazy"
-/>
+/> 
 
 </Link>
 

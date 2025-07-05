@@ -14,7 +14,7 @@ const [totalProducts, setTotalProducts] = useState(0);
 useEffect(() => {
 const DbFetch = async () => {
 try {
-const response = await fetch("https://picklewebsite.onrender.com/usersDetails");
+const response = await fetch("https://nitiaryapickle.onrender.com/usersDetails");
 
 const data = await response.json();
 

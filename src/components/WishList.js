@@ -32,7 +32,7 @@ useEffect(() => {
 const fetchProductData = async () => {
 try {
 const response = await axios.get(
-"https://picklewebsite.onrender.com/fetchProductslist"
+"https://nitiaryapickle.onrender.com/fetchProductslist"
 );
 setProductData(response.data);
 } catch (error) {
@@ -45,7 +45,7 @@ fetchProductData();
 
 const getProductImagePath = (productId) => {
 const product = productData.find((p) => p.id === productId);
-return product ? `https://picklewebsite.onrender.com${product.file_path}` : "";
+return product ? `https://nitiaryapickle.onrender.com${product.file_path}` : "";
 };
 
 

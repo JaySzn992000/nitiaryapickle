@@ -10,7 +10,7 @@ const handleDelete = async (e) => {
 e.preventDefault();
 
 try {
-const response = await fetch("https://picklewebsite.onrender.com/deletebyname", {
+const response = await fetch("https://nitiaryapickle.onrender.com/deletebyname", {
 method: "POST",
 headers: {
 "Content-Type": "application/json",

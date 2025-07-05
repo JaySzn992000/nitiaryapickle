@@ -45,7 +45,7 @@ formData.append("imagetwo", productImageTwo);
 formData.append("imagethree", productImageThree);
 
 try {
-const response = await fetch("https://picklewebsite.onrender.com/api/add-product", {
+const response = await fetch("https://nitiaryapickle.onrender.com/api/add-product", {
 method: "POST",
 body: formData,
 });

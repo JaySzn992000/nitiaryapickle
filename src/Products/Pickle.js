@@ -17,7 +17,7 @@ const query = new URLSearchParams(location.search).get("search");
 
 useEffect(() => {
 axios
-.get("https://picklewebsite.onrender.com/fetchProductslist")
+.get("https://nitiaryapickle.onrender.com/fetchProductslist")
 .then((response) => {
 setAllProducts(response.data);
 setFilteredProducts(limit ? response.data.slice(0, limit) : response.data);
@@ -30,7 +30,7 @@ console.error("Error fetching products:", error);
 useEffect(() => {
 if (query) {
 axios
-.get("https://picklewebsite.onrender.com/fetchProductslist", {
+.get("https://nitiaryapickle.onrender.com/fetchProductslist", {
 params: { search: query },
 })
 .then((response) => {
@@ -114,7 +114,7 @@ wishlistStatus[product.id] ? "active_wishlist" : ""
 
 <Link to={`/product/${product.id}`}>
 <img
-src={`https://picklewebsite.onrender.com${product.file_path}`}
+src={`https://nitiaryapickle.onrender.com${product.file_path}`}
 alt={product.name}
 className="product_image"
 />

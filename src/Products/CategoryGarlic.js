@@ -19,7 +19,7 @@ const query = new URLSearchParams(location.search).get("search"); // Extract
 
 useEffect(() => {
 axios
-.get("https://picklewebsite.onrender.com/fetchProductslistShorts")
+.get("https://nitiaryapickle.onrender.com/fetchProductslistShorts")
 .then((response) => {
 console.log("Fetched Garlic Pickles products:", response.data); 
 setAllProducts(response.data); 
@@ -37,7 +37,7 @@ console.error("Error fetching Garlic Pickles products:", error);
 useEffect(() => {
 if (query) {
 axios
-.get("https://picklewebsite.onrender.com/fetchProductslist", {
+.get("https://nitiaryapickle.onrender.com/fetchProductslist", {
 params: { search: query },
 })
 .then((response) => {
@@ -153,7 +153,7 @@ product details */}
 
 <Link to={`/product/${product.id}`}>
 <img
-src={`https://picklewebsite.onrender.com${product.file_path}`}
+src={`https://nitiaryapickle.onrender.com${product.file_path}`}
 alt={product.name}
 />
 </Link>

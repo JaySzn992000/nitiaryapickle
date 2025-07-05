@@ -19,7 +19,7 @@ const query = new URLSearchParams(location.search).get("search"); // Extract '
 
 useEffect(() => {
 axios
-.get("https://picklewebsite.onrender.com/fetchProductslistTrouser")
+.get("https://nitiaryapickle.onrender.com/fetchProductslistTrouser")
 .then((response) => {
 console.log("Fetched Ghee products:", response.data); 
 setAllProducts(response.data); 
@@ -37,7 +37,7 @@ console.error("Error fetching Ghee products:", error);
 useEffect(() => {
 if (query) {
 axios
-.get("https://picklewebsite.onrender.com/fetchProductslist", {
+.get("https://nitiaryapickle.onrender.com/fetchProductslist", {
 params: { search: query },
 })
 .then((response) => {
@@ -157,7 +157,7 @@ className="fa fa-heart fa-heart_products"
 
 <Link to={`/product/${product.id}`}>
 <img
-src={`https://picklewebsite.onrender.com${product.file_path}`}
+src={`https://nitiaryapickle.onrender.com${product.file_path}`}
 alt={product.name}
 />
 </Link>
