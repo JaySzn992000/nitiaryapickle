@@ -82,8 +82,8 @@ alert("Something went wrong. Please try again.");
 }
 };
 
-return (
 
+return (
 
 <div className="admin-registration-container">
 

@@ -5,6 +5,7 @@ import AboutPickle from "../Slider/AboutPickle.png";
 import { Helmet } from "react-helmet";
 import "./about.css";
 
+
 const Aboutus = () => {
 
 return (
