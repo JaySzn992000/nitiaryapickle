@@ -3,9 +3,12 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import NavigationClose from "../Logo/CloseTag.png";
 import LogoNitiArya from "../Logo/LogoNitiArya.png";
+
+import Heart from "../Images_ToolsSymbols/Heart.jpg";
+import Cart from "../Images_ToolsSymbols/Cart.jpg";
+
 import { Helmet } from "react-helmet";
 import "./navbar.css";
-
 
 const Navbar = () => {
 
@@ -100,39 +103,40 @@ const handleWishlist = () => {
 naviheartNavi("/WishList");
 };
 
+
 const naviTshirt = useNavigate();
 const naviGateTshirt = () => {
-naviTshirt("/CategoryMangoes");
+naviTshirt("/AloeVeraGel");
 };
 
 const naviShirt = useNavigate();
 const naviGateShirt = () => {
-naviShirt("/CategoryCarrot");
+naviShirt("/BananaPowder");
 };
 
 const naviJeans = useNavigate();
 const naviGateJeans = () => {
-naviJeans("/CategoryMixed");
+naviJeans("/BeetrootPowder");
 };
 
 const naviPants = useNavigate();
 const naviGatePants = () => {
-naviPants("/CategoryChilli");
+naviPants("/KasturiHaldi");
 };
 
 const naviSweaters = useNavigate();
 const naviGateSweaters = () => {
-naviSweaters("/CategoryLemon");
+naviSweaters("/LicoricePowder");
 };
 
 const naviTrouser = useNavigate();
 const naviGateTrousers = () => {
-naviTrouser("/CategoryGarlic");
+naviTrouser("/SandalwoodPowder");
 };
 
 const naviHoodies = useNavigate();
 const naviGateHoodies = () => {
-naviHoodies("/CategoryBitter");
+naviHoodies("/HairGrowth");
 };
 
 const naviGate = useNavigate();
@@ -298,17 +302,13 @@ content="Niti Arya offers a variety of pickles including mango, carrot, garlic, 
 <link rel="canonical" href="http://www.nitiarya.com" />
 </Helmet>
 
-
 <nav className={`Product_navbar ${scrolled ? "scrolled" : ""}`}>
 
 <div className="fa_barsLogo_Container">
-<img
-className="fa fa-bars fa_bars_nav"
+
+<img className="fa fa-bars fa_bars_nav"
 onClick={clickOpen}
-loading="lazy"
-alt=""
-src="https://cdn-icons-png.flaticon.com/128/6995/6995971.png"
-></img>
+src="https://cdn-icons-png.flaticon.com/128/5259/5259008.png" ></img>
 
 <img onClick={navigateHome}
 className="logo_img" src={LogoNitiArya}
@@ -321,63 +321,64 @@ alt=""
 {/*  */}
 
 <div className="div_ul">
+
 <li className="hover_products">
-<a onClick={naviToCollection}  href="">Shop Pickles</a>
+<a onClick={naviToCollection}  href="">CATEGORIES</a>
 
 <div className="listing_Products">
 <ul>
 <li onClick={naviProductPage}>
-<a href="">Pickle Collection</a>
+<a href="">All Products</a>
 </li>
 <li onClick={naviGateTshirt}>
-<a href="">Mango</a>
+<a href="">Aloe Vera Gel</a>
 </li>
 <li onClick={naviGateShirt}>
-<a href="">Carrot</a>
+<a href="">Banana Powder</a>
 </li>
 <li onClick={naviGateJeans}>
-<a href="">Mixed</a>
+<a href="">Beetroot Powder</a>
 </li>
 <li onClick={naviGatePants}>
-<a href="">Chilli</a>
+<a href="">Kasturi Haldi</a>
 </li>
 <li onClick={naviGateSweaters}>
-<a href="">Lemon</a>
+<a href="">Licorice Powder</a>
 </li>
 <li onClick={naviGateTrousers}>
-<a href="">Garlic</a>
+<a href="">Sandalwood Powder</a>
 </li>
 <li onClick={naviGateHoodies}>
-<a href="">Bitter</a>
+<a href="">Hair Growth</a>
 </li>
-<li onClick={naviGateBlazer}>
+
+{/* <li onClick={naviGateBlazer}>
 <a href="">Aavla</a>
 </li>
+
 <li onClick={naviGateShorts}>
 <a href="">Ghee</a>
-</li>
+</li> */}
+
 </ul>
 </div>
 </li>
-<i className="fa fa-angle-down"></i>
 </div>
 
 {/*  */}
 
 <ul className="div_ul">
 <li onClick={naviToAboutus}>
-<a href="">About us</a>
+<a href="">ABOUT US</a>
 </li>
-<i className="fa fa-angle-down"></i>
 </ul>
 
 {/*  */}
 
 <ul className="div_ul">
 <li onClick={naviToContactus}>
-<a href="">Contact</a>
+<a href="">CONTACT</a>
 </li>
-<i className="fa fa-angle-down"></i>
 </ul>
 
 {/*  */}
@@ -394,49 +395,42 @@ alt=""
 <img
 onClick={heartNavi}
 className="navProfile_img fa fa-heart"
-src="https://cdn-icons-png.flaticon.com/128/535/535285.png"
 loading="lazy"
 alt=""
+src={Heart}
 ></img>
 
 {wishlistCount > 0 && (
 <span className="wishlist-count">{wishlistCount}</span>
 )}
 
-<li>
-<a href="">WhishList</a>
-</li>
-
-
-<img
-className="navProfile_img user_right"
+{/* <i
 onClick={naviRegist}
-src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png"
-alt=""
-loading="lazy"
-/>
+className="navProfile_img user_right fa fa-user"></i> */}
 
 <ul>
-<li>
-<a href="">Profile</a>
+<li onClick={naviRegist}>
+<a href="">MY ACCOUNT</a>
 </li>
 </ul>
+
 </ul>
 
-<img
-className="fa fa-shopping-cart navProfile_img"
-src="https://cdn-icons-png.flaticon.com/128/4903/4903482.png"
-onClick={navigateEcart}
-alt=""
+
+<img 
 loading="lazy"
-/>
+alt=""
+onClick={navigateEcart}
+src={Cart}
+className="fa fa-shopping-cart navProfile_img"
+></img>
 
 
 {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
 
 <ul>
 <li className="navProfile_">
-<a href="">My Cart</a>
+<a href="">MY CART</a>
 </li>
 </ul>
 
@@ -483,7 +477,7 @@ loading="lazy"
 />
 
 <li onClick={navitoAccount} style={{ marginLeft: "-.5em" }}>
-<a href="">MY ACCOUNT</a>
+<a href="">My Account</a>
 </li>
 </div>
 </div>
@@ -524,7 +518,7 @@ loading="lazy"
 
 <div className="flex_icon_">
 <img style={{width : '27px'}}
-src="https://cdn-icons-png.flaticon.com/128/5609/5609782.png"
+src="https://cdn-icons-png.flaticon.com/128/7278/7278792.png"
 className="img_pf"
 alt=""
 loading="lazy"
@@ -541,7 +535,7 @@ loading="lazy"
 
 <div className="flex_icon_">
 <img
-src="https://cdn-icons-png.flaticon.com/128/3307/3307961.png"
+src="https://cdn-icons-png.flaticon.com/128/2822/2822682.png"
 className="img_pf"
 alt=""
 loading="lazy"
@@ -555,8 +549,9 @@ loading="lazy"
 {/*  */}
 
 <div className="flex_icon_">
+
 <img
-src="https://cdn.igp.com/raw/upload/assets/svg-icons/shortlist-new.svg"
+src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
 className="img_pf"
 alt=""
 loading="lazy"
@@ -572,7 +567,7 @@ loading="lazy"
 
 <div className="flex_icon_ contact-us">
 <img
-src="https://cdn-icons-png.flaticon.com/128/3249/3249834.png"
+src="https://cdn-icons-png.flaticon.com/128/11980/11980549.png"
 className="img_pf"
 alt=""
 loading="lazy"
@@ -587,7 +582,7 @@ loading="lazy"
 
 <div className="flex_icon_">
 <img
-src="https://cdn.igp.com/raw/upload/assets/svg-icons/terms-and-condition-new.svg"
+src="https://cdn-icons-png.flaticon.com/128/10348/10348976.png"
 className="img_pf"
 alt=""
 loading="lazy"
@@ -601,7 +596,7 @@ loading="lazy"
 
 <div className="sign_out flex_icon_">
 <img
-src="https://cdn.igp.com/raw/upload/assets/svg-icons/Icon-Logout.svg"
+src="https://cdn-icons-png.flaticon.com/128/4034/4034329.png"
 className="img_pf"
 alt=""
 loading="lazy"
