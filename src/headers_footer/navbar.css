@@ -3,9 +3,17 @@
 /* ... This is 
 for navBar ..  */
 
+
+.navProfile_img{
+color: rgb(255, 255, 255);
+font-size: 1.1rem;
+cursor: pointer;
+}
+
+
 .login_please{
 margin: .7em 0em .7em 0em;
-color: #ff0000;
+color: rgb(255, 255, 255);
 padding: 17px;
 cursor: pointer;
 }
@@ -16,11 +24,11 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 width: 100%;
-height: 83px;
-padding: 7px 57px 7px 57px;
+height: auto;
+padding: 3px 57px 3px 57px;
 z-index: 99999;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.052);
-background-color: #FFFFFF;
+background-color: #100424;
 transition: 0.3s;
 }
 
@@ -42,7 +50,7 @@ margin-left: 1.7em;
 .div_ul .fa-angle-down {
 margin-top: 0.1em;
 font-size: 1.5rem;
-color: #202434;
+color: rgb(255, 255, 255);
 }
 
 
@@ -51,8 +59,9 @@ line-height: 1.2em;
 }
 
 .loggedDiv_nameEmail li a {
-color: #000000;
+color: rgb(255, 255, 255);
 }
+
 
 .loggedDiv_nameEmail li {
 margin-top: .9em;
@@ -61,7 +70,7 @@ margin-top: .9em;
 
 #CloseTag {
 position: absolute;
-width: 22px;
+width: 27px;
 margin-top: -0.5em;
 right: 3.7em;
 cursor: pointer;
@@ -69,47 +78,53 @@ cursor: pointer;
 
 
 .Product_navbar .flex_nav_ProfileSection img {
-width: 24px;
+width: 42px;
 cursor: pointer;
+border-radius: 3px;
+padding: 3px;
 }
 
+
 .Product_navbar .nav_profileSection li a {
-color: #000000;
+color: rgb(255, 255, 255);
 }
 
 
 .Product_navbar .fa-heart {
-font-size: 1.5rem;
-margin-right: 0.3em;
+font-size: 1.2rem;
+margin-right: 0.9em;
+cursor: pointer;
 }
 
 .navProduct_Slider li {
 font-size: 0.8rem;
 color: #202434;
-border-bottom: 1px solid #DCDCDC;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .Product_navbar .div_ul {
 display: flex;
 align-items: center;
-gap: 0.6em;
+gap: 0.5em;
 }
 
 .Product_navbar .div_ul li {
-font-size: 0.9rem;
+font-size: 0.8rem;
 }
+
 
 .Product_navbar .div_ul li a {
-color: #000000;
-font-size: 0.9rem;
+color: rgb(255, 255, 255);
+font-size: 0.8rem;
 }
 
+
 .Product_navbar .logo_img {
-width: 157px;
+width: 104px;
 height: auto;   
 z-index: 999;
-margin-top: 4.3em;
+margin-bottom: .5em;
+margin-left: .7em;
 cursor: pointer;
 }
 
@@ -117,7 +132,7 @@ cursor: pointer;
 .fa_barsLogo_Container {
 display: flex;
 align-items: center;
-gap: 2.3em;
+gap: 2.1em;
 }
 
 
@@ -147,7 +162,8 @@ gap: 0.4em;
 
 .fa-shopping-cart {
 margin-right: 0.3em;
-margin-left: 0.9em;
+margin-left: 0.4em;
+font-size: 1.3rem;
 }
 
 .flex_nav_ProfileSection .nav_profileSection {
@@ -157,7 +173,7 @@ gap: 0.7em;
 }
 
 .flex_nav_ProfileSection .nav_profileSection li a {
-font-size: 0.9rem;
+font-size: 0.8rem;
 }
 
 /* ... This is For
@@ -167,19 +183,19 @@ font-size: 0.9rem;
 margin-right: 1.1em;
 }
 
-
 .navProfile_ a {
-color: #000000;
-font-size: 0.9rem;
+color: rgb(255, 255, 255);
+font-size: 0.8rem;
 }
+
 
 .flex_nav_ProfileSection .fa-search {
 display: flex;
 justify-content: center;
 align-items: center;
 margin: -0.1em 0em 0em -2.1em;
-font-size: 1.1rem;
-color: rgb(179, 176, 176);
+font-size: 1.2rem;
+color:#DCDCDC;
 height: 38px;
 z-index: 999;
 cursor: pointer;
@@ -206,8 +222,11 @@ z-index: 999;
 
 
 .fa-bars {
-width: 31px;
+width: 27px;
 cursor: pointer;
+border-radius: 7px;
+color: rgb(255, 255, 255);
+filter: invert(1);
 }
 
 
@@ -227,7 +246,7 @@ z-index: 99999;
 text-align: start;
 transition: 0.5s;
 overflow-y: auto;
-background-color: #ffffff;
+background-color: #d6b684;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.232);
 }
 
@@ -237,11 +256,11 @@ width: 4px;
 }
 
 .navProduct_Slider::-webkit-scrollbar-track {
-background-color: #202434;
+background-color: #d6b684;
 }
 
 .navProduct_Slider::-webkit-scrollbar-thumb {
-background-color: #202434;
+background-color: #d6b684;
 }
 
 .navProduct_Slider::-webkit-scrollbar-thumb:hover {
@@ -284,7 +303,7 @@ transition: 0.5s;
 }
 
 .flex_div_prfle .flex_icon_ li a {
-color: #000000;
+color: rgb(255, 255, 255);
 }
 
 
@@ -327,12 +346,14 @@ opacity: 1;
 pointer-events: auto;
 }
 
+
 .Product_navbar .hover_products .listing_Products li {
 width: 10%;
 margin-top: 0.3em;
-color: #000000;
+color: white;
 border-bottom: 1px solid rgba(117, 50, 50, 0.192);
 }
+
 
 .Product_navbar .hover_products .listing_Products li a {
 color: #808080;
@@ -346,12 +367,12 @@ color: #f8a424;
 .wishlist-count {
 position: absolute;
 margin-top: -1.7em;
-margin-left: 1.9em;
+margin-left: 1.6em;
 border-radius: 50%;
 padding: 2px 6px;
 font-size: 11px;
-color: #FFFFFF;
-background-color: rgba(11, 93, 11, 0.685);
+background-color: #d6b684;
+color: rgb(255, 255, 255);
 cursor: pointer;
 }
 
@@ -361,9 +382,9 @@ padding: 2px 6px;
 cursor: pointer;
 border-radius: 50%;
 margin-top: -1.7em;
-margin-left: -1.9em;
-color: #FFFFFF;
-background-color: rgba(11, 93, 11, 0.685);
+margin-left: -1.4em;
+color: rgb(255, 255, 255);
+background-color: #d6b684;
 }
 
 
@@ -373,7 +394,6 @@ background-color: rgba(11, 93, 11, 0.685);
 position: absolute;
 right: 2.7em;
 }
-
 
 .flex_nav_ProfileSection .fa-search {
 position: absolute;
@@ -482,8 +502,12 @@ margin-top: 1.2em;
 
 }
 
-
 @media (min-width: 321px) and (max-width: 768px) {
+
+.fa-bars{
+    margin-right: .5em;
+    width: 24px;
+}
 
 .navProduct_Slider {
 width: 307px;
@@ -504,6 +528,7 @@ display: none;
 position: absolute;
 margin-top: -0.1em;
 right: 1.3em;
+font-size: 1rem;
 }
 
 .flex_nav_ProfileSection {
@@ -520,10 +545,6 @@ gap: 0.2em;
 display: none;
 }
 
-
-.Product_navbar {
-height: 67px;
-}
 
 .Product_navbar.scrolled {
 height: 67px;
@@ -557,8 +578,9 @@ gap: 0.7em;
 margin-top: 1.3em;
 }
 
+
 .Product_navbar .logo_img {
-width: 107px;
+width: 104px;
 height: auto;
 }
 
@@ -576,6 +598,7 @@ margin-top: 1.2em;
 
 
 @media (max-width: 768px) {
+
 
 .flex_div_prfle {
 line-height: 2.9em;
@@ -612,15 +635,13 @@ align-items: center;
 margin-left: 1.3em;
 }
 
+
 .fa_bars_nav {
 display: block;
-font-size: 1.5rem;
-color: #000000;
+font-size: 1.3rem;
+color: rgb(255, 255, 255);
 }
 
-.Product_navbar .logo_img {
-width: 113px;
-}
 
 .search_products {
 display: none;
@@ -679,7 +700,7 @@ margin: 0.1em 0.1em 0em 0em;
 }
 
 
-@media (min-width: 769px) and (max-width: 1516px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 
 .flex_div_prfle {
 line-height: 2.9em;
